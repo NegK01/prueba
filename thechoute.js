@@ -541,7 +541,7 @@ if (hour_now >= '01' && hour_now <= '05') {
 } else if (hour_now >= '18' && hour_now <= '23') {
   timeFt = 'Buenas noches🌃'
 } 
-const yo = `𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊`
+const yo = `NegBot`
 
 const chr = {
   key: {
@@ -555,7 +555,7 @@ const chr = {
   "mimetype": "image/jpeg",
   "jpegThumbnail": fs.readFileSync(`./media/imagen/GFX.jpg`)
   },
-  "title": `${yo} | 𝑩𝒂𝒃𝒚𝑩𝒆𝒄𝒉𝒐𝒔𝒐`,
+  "title": `${yo} | NegBot`,
   "description": "",
   "currencyCode": "L&J",
   "priceAmount1000": "9999999999999999",
@@ -630,7 +630,6 @@ Buenas tardes🌇 _@${sender.split('@')[0]}_
 ||- *_-INFO DEL BOT-_*
 [💈] Creador: @${Oowner.split('@')[0]}
 [💈] Hora: ${jm}
-[💈] Dispositivo: _${leo.user.phone.device_manufacturer}_
 [💈] Servidor: ${leo.browserDescription[0]}
 [💈] Version de WhatsApp: ${leo.browserDescription[2]}
 [💈] Navedador: ${leo.browserDescription[1]}
@@ -673,7 +672,7 @@ const nivel = `
 ` 
 const texto = `
 ⚊⚊⚊⚊⚊✬✥✬⚊⚊⚊⚊⚊}
-      ༻▫️ 𝒯𝒽𝑒 𝒞𝒽𝑜𝓊𝓉𝑒 ▫️༺
+      ༻▫️ _NegBot_ ▫️༺
 ⚊⚊⚊⚊⚊✬✥✬⚊⚊⚊⚊⚊
 • • • • • • • • •「◆」• • • • • • • • •
 _Si el bot presenta algun fallo, notificarlo a @${Oowner.split('@')[0]}_
@@ -815,7 +814,7 @@ const base = `
 INFO DE MI CREADOR
 
 *Youtube:*
-https://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg?sub_confirmation=1
+https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1
 
 *Instagram:*
 https://www.instagram.com/the_choute_/
@@ -837,11 +836,6 @@ Chat Totales: :${totalchat.length}
 Mesajes sin leer: 
 
 DISPOSITIVO
-Dispositivo: ${device_manufacturer}s
-Modelo: ${device_model}
-Android: ${os_version} 
-Bateria: 
-Ram: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 Hora: ${hora}
 Fecha: ${week1}  ${calender1}
 `
@@ -854,7 +848,7 @@ Mi creador es @${Oowner.split('@')[0]}
 
 *Github:* ${gitchoute}
 
-*Youtube:* youtube.com/c/thechout`
+*Youtube:* www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw`
 
 const registro = `
 *PORFAVOR ESCRIBE BIEN EL FORMATO DE REGISTRO:* 
@@ -926,11 +920,6 @@ Hoy es ${week1} ${calender1}
 [🔰] Chat de Grupos:  ${totalchat.length - giid.length}
 [🔰] Chat Totales: :${totalchat.length}
 
-[🔰] Dispositivo: ${device_manufacturer}s
-[🔰] Modelo: ${device_model}
-[🔰] Android: ${os_version} 
-[🔰] Bateria: 
-[🔰] Ram: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 [🔰] Hora: ${hora}
 [🔰] Fecha: ${week1}  ${calender1}
 
@@ -1016,7 +1005,7 @@ if (test.includes(`grupo`)){
   💭:Se ayuda a quienes tengas problemas
   
   Grupo 1 : 
-  _https://chat.whatsapp.com/Jv3BQj0TgZl4wyrslvM3fS_
+  _https://chat.whatsapp.com/DPAHNRMhool84aBWoIzIPR_
   
   Grupo 2 : 
   _https://chat.whatsapp.com/HkUAxi8yB17E4ihRhtdWgT_`, MessageType.text, {quoted: choute})
@@ -1030,7 +1019,7 @@ if (test.includes(`grupo`)){
         let lista = leo.prepareMessageFromContent(from,{
         "listMessage": {
         "description": `${menue}`,
-        "buttonText": "Selecciona tu menu",
+        "buttonText": "Selecciona menu",
         "listType": "SINGLE_SELECT",
         "sections": [
         { "title": `Menu Basico`,
@@ -1056,7 +1045,7 @@ if (test.includes(`grupo`)){
         "rowId": `admin`
         },
         {
-        "title": 'Owner / Dueño Del Bot',
+        "title": 'Owner/Dueño Del Bot',
         "rowId": `menuowner`
         },
         {
@@ -1081,7 +1070,7 @@ if (test.includes(`grupo`)){
         "rowId": `creador`
         },
         {
-        "title": 'Donacion / Agradecimiento',
+        "title": 'Donacion/Agradecimiento',
         "rowId": `agradecimiento`
         },
         ]    
@@ -1175,7 +1164,7 @@ if (choute.message.listResponseMessage){
   imageMsg = (await leo.prepareMessageMedia(fs.readFileSync(`./media/imagen/admin.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/imagen/fake.jpg`)})).imageMessage
   buttonsMessage = {
   contentText: `${txtt}`,
-  footerText: '© Creator 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊\nInstagram: instagram.com/the_choute_', imageMessage: imageMsg,
+  footerText: '© Creator Neg\nGitHub: https://github.com/NegK01', imageMessage: imageMsg,
   buttons: buttons1,
   headerType: 4}
   prep = leo.prepareMessageFromContent(from, { buttonsMessage }, { quoted: choute,  contextInfo: { mentionedJid: [sender,Oowner]} })
@@ -1195,7 +1184,7 @@ if (choute.message.listResponseMessage){
     imageMsg = (await leo.prepareMessageMedia(fs.readFileSync(`./media/imagen/bot-baby.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/imagen/fake.jpg`)})).imageMessage
     buttonsMessage = {
     contentText: `${txtt}`,
-    footerText: '© Creator 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊', imageMessage: imageMsg,
+    footerText: '© Creator Neg', imageMessage: imageMsg,
     buttons: buttons1,
     headerType: 4}
     all = leo.prepareMessageFromContent(from, { buttonsMessage }, { quoted: choute, contextInfo: { mentionedJid: [sender,Oowner]} })
@@ -1831,7 +1820,7 @@ case 'sticker':
                   {"title": 'Grupo Oficial',       
                   "body": 'Subcribete Te Podria Interesar',  
                   "thumbnail": fs.readFileSync('./media/imagen/uwu.jpg'),
-                  "sourceUrl": 'https://chat.whatsapp.com/Jv3BQj0TgZl4wyrslvM3fS'}}});
+                  "sourceUrl": 'https://chat.whatsapp.com/DPAHNRMhool84aBWoIzIPR'}}});
 			  fs.unlinkSync(media);
                   fs.unlinkSync(ran);})
                   .addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
