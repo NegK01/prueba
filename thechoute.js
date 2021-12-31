@@ -585,7 +585,7 @@ AGRADECIMIENTO
 Si quieres agradecer o realizar una donación por utilizar mi bot puedes hacerlo, subcribiendote a mi canal y siguiendome en mis redes:
 
 ★·.·¯·.·★ *YOUTUBE* ★·.·¯·.·★
-_https://www.youtube.com/c/thechout?sub_confirmation=1_
+_https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1_
 
 ★·.·¯·.·★ *INSTAGRAM* ★·.·´¯·.·★
 https://www.instagram.com/the_choute_/
@@ -894,12 +894,16 @@ PARA INICIAR EL BOT
 
 - npm start`
 
+const Ch = 
+`*Canal Oficial*
+
+https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw`
 
 const allmenu = 
 `
 ╔─━━━░★░━━━━╗
             *MENU OFICIAL*
-            𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊
+                 Neg
 ╚─━━━░★░━━━─╝
 
 ¤ = ~ ~ ◉ ~~ = ¤.•♫•♬•♬•♫•.
@@ -981,6 +985,18 @@ if (choute.message.buttonsResponseMessage){
     mediaUrl: "https://youtu.be/Uv8U9VChJHo"}}}) 
     addFilter(from)
       addLevelingLevel(sender, 5)	}}
+	  
+if (choute.message.buttonsResponseMessage){
+  test = choute.message.buttonsResponseMessage.selectedButtonId
+  if (test.includes(`sex`)){
+    reply('*Cargando Proceso de Instalacion*\nPorfavor esperar.')
+    leo.sendMessage(from, `${Ch}`, MessageType.text, {quoted: choute, caption: `El video sera subido pronto en el canal de neg `, contextInfo: {"forwardingScore": 508, "isForwarded": true, "externalAdReply": 
+    {"title": `Hola ${pushname} 👋🏻`, 
+    "body": `MIRA EL VIDEO COMPLETO`, "mediaType": 2, 
+    "thumbnail": fs.readFileSync(`media/imagen/youtube-min.jpg`), 
+    mediaUrl: "https://youtu.be/Uv8U9VChJHo"}}}) 
+    addFilter(from)
+      addLevelingLevel(sender, 5)	}}
 
       if(body == ('Leo')) 
       if (!isOwner)
@@ -1022,7 +1038,7 @@ if (test.includes(`grupo`)){
         "buttonText": "Selecciona menu",
         "listType": "SINGLE_SELECT",
         "sections": [
-        { "title": `Menu Basico`,
+        { "title": `⚜️ Menu Basico ⚜️`,
         "rows": [
         {
         "title": 'Mi Perfil',
@@ -1038,7 +1054,7 @@ if (test.includes(`grupo`)){
         },
         ]
         },
-        { "title": `Seleccion tu menu`,
+        { "title": `⚜️ Menus extras ⚜️`,
         "rows": [
         {
         "title": 'Menu de Grupos',
@@ -1063,7 +1079,7 @@ if (test.includes(`grupo`)){
         ]
         },        
         {
-        "title": `🔖 Créditos / Creador 🔮 `,
+        "title": `⚜️ Créditos/Creador ⚜️ `,
         "rows": [
         {
         "title": ' 🔮 Creador',
@@ -1076,7 +1092,7 @@ if (test.includes(`grupo`)){
         ]    
         },
         {
-        "title": `Link Grupos de WhatsApp Recomendados`,
+        "title": `⚜️ Link Grupos Recomendados ⚜️`,
         "rows": [
         {
         "title": 'Grupos de Amistad & Mas',
@@ -1090,6 +1106,10 @@ if (test.includes(`grupo`)){
         {
         "title": 'Como Instalar Este Bot',
         "rowId": `install`
+        },
+	{
+        "title": 'Canal',
+        "rowId": `Ch`
         },
         ]    
         }
@@ -1262,7 +1282,7 @@ if (choute.message.listResponseMessage){
   imageMsg = (await leo.prepareMessageMedia(fs.readFileSync(`./media/imagen/TikTok.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/imagen/fake.jpg`)})).imageMessage
   buttonsMessage = {
   contentText: `${txtt}`,
-  footerText: '© Creator 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊', imageMessage: imageMsg,
+  footerText: '© Creator Neg', imageMessage: imageMsg,
   buttons: buttons1,
   headerType: 4}
   prep = leo.prepareMessageFromContent(from, { buttonsMessage }, { quoted: choute })
@@ -1317,6 +1337,16 @@ if (choute.message.listResponseMessage){
   addFilter(from)
   addLevelingLevel(sender, 5)	}}  
 
+if (choute.message.listResponseMessage){
+  test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
+  if (test.includes(`Ch`)){
+  leo.updatePresence(from, Presence.composing)
+  if (!isRegister) return reply(baby.only.usrReg)
+  uptime = process.uptime()
+  leo.sendMessage(from, `${Ch}`, MessageType.text, {quoted: choute, contextInfo: { mentionedJid: [sender,Oowner]}})  
+  addFilter(from)
+  addLevelingLevel(sender, 5)	}}  
+	  
 if (choute.message.buttonsResponseMessage){
 test = choute.message.buttonsResponseMessage.selectedButtonId
 if (test.includes(`verdad`)){
@@ -2040,7 +2070,7 @@ _Acontinuacion te muestro, mi creador, de preferencia solo hablare si necesitas 
     {"title": 'Canal de Mi Creador',       
     "body": 'Subcribete Te Podria Interesar',  
     "thumbnail": fs.readFileSync('./media/imagen/ldeadnote.png'),
-    "sourceUrl": 'https://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg?sub_confirmation=1'}}})
+    "sourceUrl": 'https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1'}}})
     break          
 
 
@@ -2612,7 +2642,7 @@ case 'neon':
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: choute, caption: '*🔥 𝐋𝐨𝐠𝐨𝐬 𝐁𝐲 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊 🔥*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg?sub_confirmation=1', sendEphemeral: true})
+sendFileFromUrl(logo, image, {quoted: choute, caption: '*🔥 𝐋𝐨𝐠𝐨𝐬 𝐁𝐲 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊 🔥*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1', sendEphemeral: true})
 break
   
 case 'matrix':
