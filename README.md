@@ -1,4 +1,4 @@
-<p align="center">
+```<p align="center">
 <img src="./media/pornhub.jpg" width="140" height="140"/>
 <p align="center">
 
@@ -13,7 +13,7 @@
 <a href="https://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg" target="blank"><img src="https://img.shields.io/badge/Youtube-30302f?style=flat&logo=youtube" /></a>
 <p align="center">
 </p>
-
+```
 ### PROCESO DE INSTALACION
 Instala los archivos necesarios
 ```bash
