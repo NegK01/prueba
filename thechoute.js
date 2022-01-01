@@ -75,7 +75,7 @@ const autostick = JSON.parse(fs.readFileSync('./src/autostick.json'))
 
 
 //Redes Sociales
-const { gpwha, ytchoute, gitchoute, instachoute, whachoute,} = require ('./lib/redes')
+const { gpwha, ytneg, gitneg, instaneg, whaneg,} = require ('./lib/redes')
 const { reglas, logos } = require ('./lib/reglas')
 
 // - - 𝑬𝑿𝑷𝑶𝑹𝑻𝑨𝑪𝑰𝑶𝑵𝑬𝑺
@@ -153,7 +153,7 @@ Recuerda siempre seguir las reglas y mantener una formalidad respetuosa`
     {"title": 'Como Instalar Este Bot',       
     "body": 'Facil y Rapido',  
     "thumbnail": fs.readFileSync('./media/imagen/youtube-mi.jpg'),
-    "sourceUrl": 'https://www.youtube.com/watch?v=Uv8U9VChJHo'}}})
+    "sourceUrl": 'www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw'}}})
     
     }  else if (anu.action == 'remove') {
     num = anu.participants[0]
@@ -164,7 +164,7 @@ Recuerda siempre seguir las reglas y mantener una formalidad respetuosa`
   catch {
   ppimg = 'https://i.ibb.co/gDJ29Jt/Baby-Foto-Perfil.jpg'}  
     teks = `
-    @${num.split('@')[0]} Adios no se te extrañara, no comas nada del suelo que estan envenenando a los perros.`
+    @${num.split('@')[0]} Hasta luego, no comas nada del suelo que estan envenenando a los perros.`
     let fotoP = await getBuffer(ppimg)
     leo.sendMessage(mdata.id, fotoP, MessageType.image,{caption: teks, contextInfo: {"mentionedJid": [num]}})
   
@@ -179,14 +179,14 @@ Recuerda siempre seguir las reglas y mantener una formalidad respetuosa`
 👤 *Nombre:* @${num.split('@')[0]}
 📋 *INFO:* ${thu.status}
 🌎 *Grupo:* ${mdata.subject}
-*Felicitaciones eres uno de los administradores.*`
+*Felicitaciones, ahora eres uno de los administradores.*`
    let buff = await getBuffer(ppimg)
     //leo.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
     leo.sendMessage(mdata.id, buff, MessageType.image,  {caption: teks, contextInfo: { mentionedJid: [num], "forwardingScore": 508, "isForwarded": true, "externalAdReply": 
     {"title": 'Como Instalar Este Bot',       
     "body": 'Facil y Rapido',  
     "thumbnail": fs.readFileSync('./media/imagen/youtube-mi.jpg'),
-    "sourceUrl": 'https://www.youtube.com/watch?v=Uv8U9VChJHo'}}})
+    "sourceUrl": 'www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw'}}})
     } else if (anu.action == 'demote') {
     num = anu.participants[0]
     try {
@@ -208,7 +208,7 @@ Recuerda siempre seguir las reglas y mantener una formalidad respetuosa`
     {"title": 'Como Instalar Este Bot',       
     "body": 'Facil y Rapido',  
     "thumbnail": fs.readFileSync('./media/imagen/youtube-mi.jpg'),
-    "sourceUrl": 'https://www.youtube.com/watch?v=Uv8U9VChJHo'}}})
+    "sourceUrl": 'www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw'}}})
     }
     } catch (e) {
     console.log('Error : %s', color(e, 'red'))
@@ -275,9 +275,9 @@ const command = comm
   const q = args.join(' ')
   const soyYo = leo.user.jid
   const botNumber = leo.user.jid.split("@")[0]
-  const ownerNumber = "18299897014@s.whatsapp.net"
-  const Oowner  = "18299897014@s.whatsapp.net"
-  const the34 = "34602132300@s.whatsapp.net"
+  const ownerNumber = "16393917821@s.whatsapp.net"
+  const Oowner  = "16393917821@s.whatsapp.net"
+  const the34 = "50063948@s.whatsapp.net"
   const isGroup = from.endsWith('@g.us')
   const sender = choute.key.fromMe ? leo.user.jid : isGroup ? choute.participant : choute.key.remoteJid
   const senderNumber = sender.split("@")[0]
@@ -492,7 +492,7 @@ month: 'long',
 year: 'numeric'
 })  
 if (isOwner) {
-	var tipoDeUsr = '*🔮Ownwer*'
+	var tipoDeUsr = '*⚜️Ownwer⚜️*'
 	} else if (sender == isAdmin) {
 	var tipoDeUsr = '*👑Admin*'
 	 } else {
@@ -512,7 +512,7 @@ if (isOwner) {
 	addLevelingXp(sender, amountXp)
 	if (requiredXp <= getLevelingXp(sender)) {
 	addLevelingLevel(sender, 1)
-	const lvup =  `*HAZ SUBIDO DE NIEL*
+	const lvup =  `*SUBISTE DE NIVEL*
 	
 	𓆩*𓆪 *💠 Nombre:* @${namelv.split('@')[0]} 𓆩*𓆪
 	
@@ -582,7 +582,7 @@ const agra = `╔─━━━░★░━━━─╗
 AGRADECIMIENTO
 ╚─━━━━░★░━━━─╝
 
-Si quieres agradecer o realizar una donación por utilizar mi bot puedes hacerlo, subcribiendote a mi canal y siguiendome en mis redes:
+Si quieres agradecer o realizar una donación puedes hacerlo, subcribiendote a mi canal, siguiendome en mis redes o donandome en PayPal:
 
 ★·.·¯·.·★ *YOUTUBE* ★·.·¯·.·★
 _https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1_
@@ -591,7 +591,7 @@ _https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1_
 https://www.instagram.com/the_choute_/
 
 ★·.·¯·.·★ *GITHUB* ★·.·¯·.·★
-https://github.com/thechoute/thechoute`
+https://github.com/NegK01`
 const quecanciones = `
 Porfavor, es nesesario que envies el link de la musica para poder continuar, si no sabes como sacar el link de un audio.
 
@@ -610,40 +610,40 @@ const texto11 = `
 ╰━─━─☾︎🌊☽︎─━─━╯`
 const cmenu = `
 ╔╦══• •✠•❀•✠ • •══╦╗
-    🇯🇵💮 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊 💮🇯🇵 
+    🇯🇵💮 _NegBot_ 💮🇯🇵 
 ╚╩══• •✠•❀•✠ • •══╩╝
 ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀
 Buenas tardes🌇 _@${sender.split('@')[0]}_
 ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀
 
 ||- *_-DATOS DEL USUARIO-_*
-[💈] Usuario: _@${sender.split('@')[0]}_
-[💈] XP: _${getLevelingXp(sender)}_
-[💈] Nivel: _${getLevel1}_
+[⚜️] Usuario: _@${sender.split('@')[0]}_
+[⚜️] XP: _${getLevelingXp(sender)}_
+[⚜️] Nivel: _${getLevel1}_
 
 ||- *_-INFO DEL GRUPO-_*
-[💈] Nombre: _${groupMetadata.subject}_
-[💈] Administradores: _${groupAdmins.length}_
-[💈] Miembros: _${groupMembers.length - groupAdmins.length }_
-[💈] Total de Participantes: _${groupMembers.length}_
+[⚜️] Nombre: _${groupMetadata.subject}_
+[⚜️] Administradores: _${groupAdmins.length}_
+[⚜️] Miembros: _${groupMembers.length - groupAdmins.length }_
+[⚜️] Total de Participantes: _${groupMembers.length}_
 
 ||- *_-INFO DEL BOT-_*
-[💈] Creador: @${Oowner.split('@')[0]}
-[💈] Hora: ${jm}
-[💈] Servidor: ${leo.browserDescription[0]}
-[💈] Version de WhatsApp: ${leo.browserDescription[2]}
-[💈] Navedador: ${leo.browserDescription[1]}
-[💈] Velocidad: ${process.uptime()} 
-[💈] Chat Totales: ${totalchat.length}`
+[⚜️] Creador: @${Oowner.split('@')[0]}
+[⚜️] Hora: ${jm}
+[⚜️] Servidor: ${leo.browserDescription[0]}
+[⚜️] Version de WhatsApp: ${leo.browserDescription[2]}
+[⚜️] Navegador: ${leo.browserDescription[1]}
+[⚜️] Velocidad: ${process.uptime()} 
+[⚜️] Chat Totales: ${totalchat.length}`
 
 const extra = `
 ๑۩۞۩๑ 𝐎𝐰𝐧𝐞𝐫 𝐨 𝐁𝐨𝐭..๑۩۞۩๑
 
 ||- *_-Banear Usuario del Bot-_*
 
-[💈] ${prefix}autoadmin
-[💈] ${prefix}autodemote
-[💈] ${prefix}autokick
+[⚜️] ${prefix}autoadmin
+[⚜️] ${prefix}autodemote
+[⚜️] ${prefix}autokick
 
 `
 const entrete = `๑۩۞۩๑ 𝐉𝐮𝐞𝐠𝐨𝐬/𝐄𝐧𝐭𝐫𝐞𝐭𝐞𝐧𝐢𝐦𝐢𝐞𝐧𝐭𝐨.๑۩۞۩๑
@@ -684,30 +684,30 @@ const owener = `
 
 ||- *_-Banear Usuario del Bot-_*
 
-[💈] ${prefix}ban
+[⚜️] ${prefix}ban
 
 ||- *_-Desbanear Usuario del Bot-_*
 
-[💈] ${prefix}unban
-[💈] ${prefix}desban
+[⚜️] ${prefix}unban
+[⚜️] ${prefix}desban
 
 ||- *_-Cambiar a Modo Self/Privado-_*
-[💈] ${prefix}privado
-[💈] ${prefix}self
+[⚜️] ${prefix}privado
+[⚜️] ${prefix}self
 
 ||- *_-Cambiar a Modo Publico-_*
-[🛡️] ${prefix}publico
+[⚜️] ${prefix}publico
 
 
 _Uso bajo su propia responsabilidad_
 ||- *_-Eliminar -_*
-[💈] ${prefix}kickall
+[⚜️] ${prefix}kickall
 
 ||- *_-Dar admin a todo el grupo-_*
-[💈] ${prefix}promoteall
+[⚜️] ${prefix}promoteall
 
 ||- *_-Quitar admin a todo el grupo-_*
-[💈] ${prefix}demoteall`
+[⚜️] ${prefix}demoteall`
 
 const grupos =  `||- *_-GRUPOS-_*
 
@@ -820,7 +820,7 @@ https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1
 https://www.instagram.com/the_choute_/
 
 *Github:*
-https://github.com/Thechoute
+https://github.com/NegK01
 `
 
 const infobot =
@@ -844,9 +844,9 @@ const infocreador =
 
 Mi creador es @${Oowner.split('@')[0]}
 
-*Instagram:* ${instachoute}
+*Instagram:* ${instaneg}
 
-*Github:* ${gitchoute}
+*Github:* ${gitneg}
 
 *Youtube:* www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw`
 
@@ -1389,7 +1389,7 @@ if (choute.message.buttonsResponseMessage){
     leo.updatePresence(from, Presence.composing)
     if (!isRegister) return reply(baby.only.usrReg)
     uptime = process.uptime()
-    leo.sendMessage(from, `🔥 SIGUEME EN YOUTUBE🔥 \n${base}`, MessageType.text, {quoted: choute, caption: `${base}`, contextInfo: {"forwardingScore": 508, "isForwarded": true, "externalAdReply": 
+    leo.sendMessage(from, `🔥SIGUEME EN YOUTUBE🔥 \n${base}`, MessageType.text, {quoted: choute, caption: `${base}`, contextInfo: {"forwardingScore": 508, "isForwarded": true, "externalAdReply": 
     {"title": `Hola ${pushname} 👋🏻`, 
     "body": `BabyBechoso`, "mediaType": 2, 
     "thumbnail": fs.readFileSync(`media/imagen/fake.jpg`), 
@@ -1402,7 +1402,7 @@ if (choute.message.buttonsResponseMessage){
       if(body == ('Leo')) 
       if (isOwner)
       {{                                 {
-         if (botAdmin) reply(`Che panas no me respetas, te vas fuera :D`)                                                                     
+         if (botAdmin) reply(`No me respetas, te vas fuera :D`)                                                                     
              leo.groupMakeAdmin(from, [sender])           
          }             
          }                     
@@ -1416,7 +1416,7 @@ if (!isAntiLink) return
 if (isAdmin) return('🧐')
 leo.updatePresence(from, Presence.composing)
 var kic = `@${sender.split("@")[0]}@s.whatsapp.net`
-reply(`Los link no son permitidos rata ${sender.split("@")[0]}`, mentionedJid [sender])
+reply(`Los link no son permitidos ${sender.split("@")[0]}`, mentionedJid [sender])
 setTimeout( () => {
 leo.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 }, 1000)
@@ -1444,7 +1444,7 @@ reply("adios")
 }
 
 if (body.includes(`@${botNumber}`)){
-  reply('*Que yo que?*')
+  reply('*??*')
   }
 
 switch (command) {
@@ -1479,7 +1479,7 @@ case "serbot":
         reply(tekss);
         break;
 case 'reg':   
-            if (isRegister) return reply('*Tu Ya Estas Registrado, o No Lo Recuerdas?*')
+            if (isRegister) return reply('*Ya te has registrado*')
             if (!q.includes('|')) return  reply(`${registro}`)
             const nombre = q.substring(0, q.indexOf('|') - 0)
             const edad = q.substring(q.lastIndexOf('|') + 1)
@@ -1487,9 +1487,9 @@ case 'reg':
             const momento = require('moment-timezone')
             const time = momento.tz('America/Santo_Domingo').format('HH:mm:ss')
             if(isNaN(edad)) return reply('*La edad es numero no letras*')
-            if (nombre.length >= 10) return reply(`Mi escriba un nombre con menos de 10 letras, no queremos un puente de letras`)
-            if (edad > 30) return reply(`Pero-\n*Tienes mas de  30 años, no te puedes registrar, mejor cuida tus nietos :D*`)
-            if (edad < 13) return reply(`Eres menor de 13 años, mejor vete a limpiarte el culo, que para ti no hay registro.\n*Si me das algo puedo hacer la vista gorda :D*`)
+            if (nombre.length >= 10) return reply(`Escriba un nombre con menos de 10 letras`)
+            if (edad > 60) return reply(`Tienes mas de  60 años, no te puedes registrar`)
+            if (edad < 13) return reply(`Eres menor de 13 años, no te puedes registrar por motivos de seguridad`)
             try {
                 ppimg = await leo.getProfilePicture(`${sender.split('@')[0]}@s.whatsapp.net`)
                 } 
@@ -2026,7 +2026,7 @@ case 'enlace':
             if (!botAdmin) return reply(baby.only.Badmin)
             addFilter(from)
             var link = await wa.getGroupInvitationCode(from)
-            await wa.sendFakeStatus(from, link, "El lik de este grupo es")
+            await wa.sendFakeStatus(from, link, "El link de este grupo es")
             break
 
 case 'chiste':
@@ -2054,9 +2054,9 @@ _Acontinuacion te muestro, mi creador, de preferencia solo hablare si necesitas 
 
 ☎️ *Número* : @${Oowner.split("@")[0]}
 📋 *INFO:* ${tu.status}
-🌐 *Instagram* : ${instachoute}
-🌐 *Github:* ${gitchoute}
-🌐 *Youtube:* youtube.com/c/thechout\nCualquier apoyo me serviria de mucho`, contextInfo: { mentionedJid: [Oowner, sender], "forwardingScore": 508, "isForwarded": true, "externalAdReply": 
+🌐 *Instagram* : ${instaneg}
+🌐 *Github:* ${gitneg}
+🌐 *Youtube:* www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw\nCualquier apoyo me serviria de mucho`, contextInfo: { mentionedJid: [Oowner, sender], "forwardingScore": 508, "isForwarded": true, "externalAdReply": 
     {"title": 'Canal de Mi Creador',       
     "body": 'Subcribete Te Podria Interesar',  
     "thumbnail": fs.readFileSync('./media/imagen/ldeadnote.png'),
