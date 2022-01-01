@@ -1101,7 +1101,7 @@ if (test.includes(`grupo`)){
         ]    
         },
         {
-        "title": `Youtube`,
+        "title": `⚜️ Youtube ⚜️`,
         "rows": [
         {
         "title": 'Como Instalar Este Bot',
@@ -1527,7 +1527,7 @@ case 'menu':
                 if (isBan) return reply (baby.only.benned)	
                 reply('Cargando Menu, Porfavor no hacer spam de mensaje')
                txtt =`${cmenu}`              
-                sendButLocation(from, `${txtt}`, `Creador @${Oowner.split("@")[0]}`, fs.readFileSync("./media/imagen/absu.jpg"),
+                sendButLocation(from, `${txtt}`, `Creador @${Oowner.split("@")[0]}`, fs.readFileSync("./media/imagen/NegBot.png"),
                 buttons =[ {buttonId:`ml`,buttonText:{displayText: 'Lista de Menus'},type:1},
                 {buttonId:`sex`,buttonText:{displayText:'Como Tener Este Bot'},type:1},
                 {buttonId:`grupo`,buttonText:{displayText:'Grupos OFC'},type:1}],
