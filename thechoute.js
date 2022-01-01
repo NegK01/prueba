@@ -1201,7 +1201,7 @@ if (choute.message.listResponseMessage){
   txtt =
   `${texto}\n${allmenu}`
     buttons1 = [{buttonId:`grupo`,buttonText:{displayText: 'Grupo de WhatsApp'},type:1},]
-    imageMsg = (await leo.prepareMessageMedia(fs.readFileSync(`./media/imagen/negbot.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/imagen/fake.jpg`)})).imageMessage
+    imageMsg = (await leo.prepareMessageMedia(fs.readFileSync(`./media/imagen/bot-baby.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/imagen/fake.jpg`)})).imageMessage
     buttonsMessage = {
     contentText: `${txtt}`,
     footerText: '© Creator Neg', imageMessage: imageMsg,
@@ -1517,7 +1517,7 @@ case 'menu':
                 if (isBan) return reply (baby.only.benned)	
                 reply('Cargando Menu, Porfavor no hacer spam de mensaje')
                txtt =`${cmenu}`              
-                sendButLocation(from, `${txtt}`, `Creador @${Oowner.split("@")[0]}`, fs.readFileSync("./media/imagen/neg.jpg"),
+                sendButLocation(from, `${txtt}`, `Creador @${Oowner.split("@")[0]}`, fs.readFileSync("./media/imagen/absu.jpg"),
                 buttons =[ {buttonId:`ml`,buttonText:{displayText: 'Lista de Menus'},type:1},
                 {buttonId:`sex`,buttonText:{displayText:'Como Tener Este Bot'},type:1},
                 {buttonId:`grupo`,buttonText:{displayText:'Grupos OFC'},type:1}],
@@ -2901,7 +2901,7 @@ break
 case 'menuofc':
               if (!isRegister) return reply(baby.only.usrReg)                
               reply('Cargando menu, porfavor espera.\n\nNo hagas spam de comandos')
-              leo.sendMessage(from, fs.readFileSync('./media/imagen/negbot.jpg'), image, {caption: `${allmenu}` , quoted: chr, contextInfo: { mentionedJid: [sender,Oowner]}})
+              leo.sendMessage(from, fs.readFileSync('./media/imagen/bot-baby.jpg'), image, {caption: `${allmenu}` , quoted: chr, contextInfo: { mentionedJid: [sender,Oowner]}})
               break
 
 case 'menugrupo':
