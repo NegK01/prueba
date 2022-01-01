@@ -1336,16 +1336,6 @@ if (choute.message.listResponseMessage){
   leo.sendMessage(from, `${install}`, MessageType.text, {quoted: choute, contextInfo: { mentionedJid: [sender,Oowner]}})  
   addFilter(from)
   addLevelingLevel(sender, 5)	}}  
-
-if (choute.message.listResponseMessage){
-  test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
-  if (test.includes(`Ch`)){
-  leo.updatePresence(from, Presence.composing)
-  if (!isRegister) return reply(baby.only.usrReg)
-  uptime = process.uptime()
-  leo.sendMessage(from, `${Ch}`, MessageType.text, {quoted: choute, contextInfo: { mentionedJid: [sender,Oowner]}})  
-  addFilter(from)
-  addLevelingLevel(sender, 5)	}}  
 	  
 if (choute.message.buttonsResponseMessage){
 test = choute.message.buttonsResponseMessage.selectedButtonId
