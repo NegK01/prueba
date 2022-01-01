@@ -1,18 +1,4 @@
-<p align="center">
-<img src="./media/pornhub.jpg" width="140" height="140"/>
-<p align="center">
 
-<p align="center">
-<a href="https://github.com/thechoute/"><img title="Author" src="https://img.shields.io/badge/Author-𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊-red.svg?style=for-the-badge&logo=github"></a>
-
-<p align="center">
-
-<p align="center">
-<a href="http://wa.me/18299897014" target="blank"><img src="https://img.shields.io/badge/Whatsapp-30302f?style=flat&logo=whatsapp" /></a>
-<a href="http://www.instagram.com/the_choute_" target="blank"><img src="https://img.shields.io/badge/Instagram-30302f?style=flat&logo=instagram" /></a>
-<a href="https://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg" target="blank"><img src="https://img.shields.io/badge/Youtube-30302f?style=flat&logo=youtube" /></a>
-<p align="center">
-</p>
 
 ### PROCESO DE INSTALACION
 Instala los archivos necesarios
