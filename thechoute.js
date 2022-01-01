@@ -957,9 +957,9 @@ ${owener}
         benned: 'Eres un usario *BANEADO* no puedes usar el bot',
         ownerG: 'Este comando solo puede ser utilizado por el creador del grupo',
         ownerB: 'Este comandos solo puede ser utilizado desde el numero del bot',
-        admin: '𝐄𝐬𝐭𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨 𝐞𝐬 𝐬𝐨𝐥𝐨 𝐩𝐚𝐫𝐚 𝐚𝐝𝐦𝐢𝐧𝐢𝐬𝐭𝐫𝐚𝐝𝐨𝐫𝐞𝐬 𝐝𝐞𝐥 𝐠𝐫𝐮𝐩𝐨.',
-        Badmin: '𝐁𝐨𝐭𝐜𝐢𝐭𝐨 𝐝𝐞𝐛𝐞 𝐬𝐞𝐫 𝐚𝐝𝐦𝐢𝐧 𝐩𝐚𝐫𝐚 𝐩𝐨𝐝𝐞𝐫 𝐮𝐬𝐚𝐫 𝐞𝐬𝐭𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨',
-        usrReg: `No estas registrado para registrarte utiliza\n${prefix}reg\n\n*Ejemplo:*\n\n${prefix}reg Thechoute|14`
+        admin: '*Este comando es solo para administradores del grupo*',
+        Badmin: '*El bot debe ser admin para poder usar este comando*',
+        usrReg: `No estas registrado, para registrarte utiliza\n${prefix}reg\n\n*Ejemplo:*\n\n${prefix}reg Nombre|Edad`
       }
     }
 
@@ -982,19 +982,7 @@ if (choute.message.buttonsResponseMessage){
     {"title": `Hola ${pushname} 👋🏻`, 
     "body": `MIRA EL VIDEO COMPLETO`, "mediaType": 2, 
     "thumbnail": fs.readFileSync(`media/imagen/youtube-min.jpg`), 
-    mediaUrl: "https://youtu.be/Uv8U9VChJHo"}}}) 
-    addFilter(from)
-      addLevelingLevel(sender, 5)	}}
-	  
-if (choute.message.buttonsResponseMessage){
-  test = choute.message.buttonsResponseMessage.selectedButtonId
-  if (test.includes(`sex`)){
-    reply('*Cargando Proceso de Instalacion*\nPorfavor esperar.')
-    leo.sendMessage(from, `${Ch}`, MessageType.text, {quoted: choute, caption: `El video sera subido pronto en el canal de neg `, contextInfo: {"forwardingScore": 508, "isForwarded": true, "externalAdReply": 
-    {"title": `Hola ${pushname} 👋🏻`, 
-    "body": `MIRA EL VIDEO COMPLETO`, "mediaType": 2, 
-    "thumbnail": fs.readFileSync(`media/imagen/youtube-min.jpg`), 
-    mediaUrl: "https://youtu.be/Uv8U9VChJHo"}}}) 
+    mediaUrl: "https://www.youtube.com/watch?v=fzV_QZODisQ"}}}) 
     addFilter(from)
       addLevelingLevel(sender, 5)	}}
 
@@ -1024,7 +1012,7 @@ if (test.includes(`grupo`)){
   _https://chat.whatsapp.com/DPAHNRMhool84aBWoIzIPR_
   
   Grupo 2 : 
-  _https://chat.whatsapp.com/HkUAxi8yB17E4ihRhtdWgT_`, MessageType.text, {quoted: choute})
+  _https://chat.whatsapp.com/DPAHNRMhool84aBWoIzIPR_`, MessageType.text, {quoted: choute})
   addFilter(from)
     addLevelingLevel(sender, 5)	}}
 
@@ -1506,7 +1494,7 @@ case 'reg':
 [💈] 𝐄𝐃𝐀𝐃: _${edad}_
 [💈] 𝐇𝐎𝐑𝐀: _${time}_
 [💈] DNI: _${serialUser}_
-└────「 *𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊* 」
+└────「 *_Neg Bot_* 」
 Verificación completa usa *${prefix}menu* para ver el Menu`
                 let tampa = await getBuffer(ppimg)
                 leo.sendMessage(from, tampa, image, {quoted: choute, caption: capt})
@@ -1591,7 +1579,7 @@ case 'demote':
               if (!botAdmin) return reply(baby.only.Badmin)
               if (choute.message.extendedTextMessage != undefined){
               mentioned = choute.message.extendedTextMessage.contextInfo.mentionedJid
-              if (!mentionUser.length == 1) return reply('Eliqueta un mensaje de aquien debo quitar admin o mencionalo')
+              if (!mentionUser.length == 1) return reply('Eliqueta un mensaje de quien debo quitar admin o mencionalo')
 
               await wa.setBio(from, `Baaaiii...`, '')
               if (mentionUser.length == 1)
@@ -1619,7 +1607,7 @@ case 'añadir':
                               leo.groupAdd(from, [num])
                               } catch (e) {
                               console.log('Error :', e)
-                              return leo.sendMessage(from, 'Modo privado dice:v', MessageType.text)
+                              return leo.sendMessage(from, 'Dice modo privado', MessageType.text)
                               }
                               break
 
@@ -1632,7 +1620,7 @@ case 'eliminar':
             if (!botAdmin) return reply(baby.only.Badmin)
             if (!mentionUser.length == 1) return reply('Eliqueta un mensaje de aquien debo eliminar o mencionalo')
             leo.groupRemove(from, mentionUser) 
-            reply ('Al toque elimino a la rata')
+            reply ('Al toque')
             break
 
 case 'antifake':        
@@ -1648,7 +1636,7 @@ case 'antifake':
                   antifake.push(from)                          
                   fs.writeFileSync('./src/antifake.json', JSON.stringify(antifake))      
                   reply(`*[ Activado ]*`)  
-                  reply(`*Los numeros considerados como FAKEs, sera eliminados del grupo*`)  
+                  reply(`*Los numeros considerados como FAKES, sera eliminados del grupo*`)  
                 } else if (args[0] === 'off') {             
                   var ini = antifake.indexOf(from)
                   antifake.splice(ini, 1)           
@@ -1755,7 +1743,7 @@ case 'xd':
             teks += `╠ @${mem.jid.split('@')[0]}\n`
             members_id.push(mem.jid)
             }
-            mentions('*𝐌𝐈𝐄𝐌𝐁𝐑𝐎𝐒  𝐃𝐄𝐋  𝐆𝐑𝐔𝐏𝐎*\n╔════ 𝕭𝖆𝖇𝖞𝕭𝖊𝖈𝖍𝖔𝖘𝖔\n╠ ● '+teks+'╠═══════ *𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊* ═════\n╚══════', members_id, true)
+            mentions('*𝐌𝐈𝐄𝐌𝐁𝐑𝐎𝐒  𝐃𝐄𝐋  𝐆𝐑𝐔𝐏𝐎*\n╔════ *_Neg Bot_*\n╠ ● '+teks+'╠═══════ *_Neg_* ═════\n╚══════', members_id, true)
             addFilter(from)
             break
 
@@ -1787,7 +1775,7 @@ case 'sider':
 if (!isGroup) return reply(baby.only.group)
 infom = await leo.messageInfo(from, choute.message.extendedTextMessage.contextInfo.stanzaId)
 tagg = []
-teks = `✅ Este Mensaje ah sido visto por:\n\n`
+teks = `✅ Este mensaje fue visto por:\n\n`
 for(let i of infom.reads){
 teks += '@' + i.jid.split('@')[0] + '\n'
 teks += `📲 Hora: ` + moment(`${i.t}` * 1000).tz('America/Mexico_City').format('DD/MM/YYYY HH:mm:ss') + '\n\n'
@@ -1866,7 +1854,7 @@ var imageBuffer2c = new Buffer.from(mantap2c, 'base64');
 leo.sendMessage(from, imageBuffer2c, sticker, {quoted: choute, sendEphemeral: true})
 fs.unlinkSync('./stickc.jpeg')
 } else {
-reply('Se nesecita una foto para hacer su sticker!');
+reply('Se nesecita una imagen para hacer su sticker!');
 }
 break
 
@@ -1936,7 +1924,7 @@ case 'ytmp3':
               teks = args.join(' ')
               if (!teks.endsWith("-doc")){
               res1 = await yts(q).catch(e => {	
-              reply('*NO HE ENCONTRADO LO QUE BUSCABAS*')
+              reply('*No he encontrado lo que buscas*')
               })	
               let thumbInfo = ` [ *${res1.all[0].title}* ]
 *Subido* ${res1.all[0].ago}
@@ -2050,7 +2038,7 @@ case 'creador':
 its = await getBuffer (ppimg)
     leo.sendMessage(from,  its, image, {thumbnail:fs.readFileSync('./media/imagen/cmayor.jpg'), quoted: choute, caption: 
 `${timeFt} @${sender.split('@')[0]}
-_Acontinuacion te muestro, mi creador, de preferencia solo hablare si necesitas algo :D_
+_A continuación te muestro, mi creador, en especial responderá mensajes *no spam* _
 
 ☎️ *Número* : @${Oowner.split("@")[0]}
 📋 *INFO:* ${tu.status}
@@ -2073,7 +2061,7 @@ case 'vor':
             imageMsg = (await leo.prepareMessageMedia(fs.readFileSync(`./media/imagen/vor.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/imagen/fake.jpg`)})).imageMessage
             buttonsMessage = {
             contentText: `${txtt}`,
-            footerText: '© Creator 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊', imageMessage: imageMsg,
+            footerText: '© Creator Neg', imageMessage: imageMsg,
             buttons: buttons1,
             headerType: 4} 
             prep = leo.prepareMessageFromContent(from, { buttonsMessage }, { quoted: choute })
@@ -2159,7 +2147,7 @@ break
 case 'pregunta':
                   if (!isRegister) return reply(baby.only.usrReg)
                   if (isBan) return reply (baby.only.benned)	
-                  respuesta = ['Si', 'No', 'Tal vez', 'Puede ser', 'Ai una probabilidad del 99.99999999991.01%', 'Puede que no', 'Yo que se', 'mmmm🤔.... Dejame lo pienso un poco']
+                  respuesta = ['Si', 'No', 'Tal vez', 'Puede ser', 'Hay una probabilidad de 99.999%', 'Puede que no', 'Yo que se', 'mmmm.... Deja lo pienso un poco']
                   answer = respuesta[Math.floor(Math.random() * respuesta.length)]
                   if (!q) return reply('Y la pregunta?')
                   reply(answer)
@@ -2211,7 +2199,7 @@ case 'google':
 `
               }
               var babygg = ggsm.trim()
-              reply(`*🔍Busqueda realizada por* ${yo} \n\n${babygg}`)
+              reply(`*Busqueda realizada por* ${yo} \n\n${babygg}`)
               addFilter(from)
               break     
 
@@ -2239,7 +2227,7 @@ case 'imagen':
 case 'wp':
   if (!isRegister) return reply(baby.only.usrReg)
   if (isBan) return reply (baby.only.benned)	
-                reply('*Deja busco un fondo de pantalla para ti, perate :D*')
+                reply('*Deja busco un fondo de pantalla para ti*')
               res = LeoGgImg(`fondos de pantalla 4k ${q}`, google)
               function google(error, result){
               if (error){ return reply('_[ ! ] *Intentalo de nuevo*_')}
@@ -2262,7 +2250,7 @@ case 'voz':
                 ranm = getRandom('.mp3')
                 rano = getRandom('.ogg')
                 dtt.length > 300
-                ? reply('Mira, si no sabes usar esto... mejor no lo agas 😤')
+                ? reply('Si no sabes usar esto... mejor evitalo')
                 : gtts.save(ranm, dtt, function() {
                 leo.updatePresence(from, Presence.recording)
                 leo.sendMessage(from, fs.readFileSync(ranm), audio, {quoted: choute, mimetype: 'audio/mp4', duration: -999999999999999999, ptt:true, sendEphemeral: true, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
@@ -2272,7 +2260,7 @@ case 'voz':
                 break
 
 case 'idiomas':
-                  reply(`*Estos son los idiomas soportados por la voz👇🏻*:
+                  reply(`*Estos son los idiomas disponibles*:
                   
                     'af': 'Afrikaans',
                     'sq': 'Albanian',
@@ -2382,7 +2370,7 @@ break
 case 'vrapido':	    
 if (!isRegister) return reply(baby.only.usrReg)
 if (isBan) return reply (baby.only.benned)	
-if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO PORFAVOR!!*')
+if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO POR FAVOR!!*')
 reply(baby.wait)
 encmediav1 = JSON.parse(JSON.stringify(choute).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav1 = await leo.downloadAndSaveMediaMessage(encmediav1)
@@ -2400,7 +2388,7 @@ break
 case 'vlento':
   if (!isRegister) return reply(baby.only.usrReg)
   if (isBan) return reply (baby.only.benned)	
-if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO PORFAVOR!!*')
+if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO POR FAVOR!!*')
 reply(baby.wait)
 encmediav2 = JSON.parse(JSON.stringify(choute).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav2 = await leo.downloadAndSaveMediaMessage(encmediav2)
@@ -2418,7 +2406,7 @@ break
 case 'mirror':
   if (!isRegister) return reply(baby.only.usrReg)
   if (isBan) return reply (baby.only.benned)	
-if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO PORFAVOR!!*')
+if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO POR FAVOR!!*')
 reply(baby.wait)
 encmediav3 = JSON.parse(JSON.stringify(choute).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav4 = await leo.downloadAndSaveMediaMessage(encmediav3)
@@ -2436,7 +2424,7 @@ break
 case 'vefecto':
   if (!isRegister) return reply(baby.only.usrReg)
   if (isBan) return reply (baby.only.benned)	
-if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO PORFAVOR!!*')
+if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO POR FAVOR!!*')
 reply(baby.wait)
 encmediav5 = JSON.parse(JSON.stringify(choute).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav5 = await leo.downloadAndSaveMediaMessage(encmediav5)
@@ -2454,7 +2442,7 @@ break
 case 'sinsonido':
   if (!isRegister) return reply(baby.only.usrReg)
   if (isBan) return reply (baby.only.benned)	
-if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO PORFAVOR!!*')
+if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO POR FAVOR!!*')
 reply(baby.wait)
 encmediav6 = JSON.parse(JSON.stringify(choute).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav6 = await leo.downloadAndSaveMediaMessage(encmediav6)
@@ -2666,7 +2654,7 @@ case 'lobo':
   if (!isRegister) return reply(baby.only.usrReg)
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
+if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/wolflogo?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*🔥 𝐋𝐨𝐠𝐨𝐬 𝐁𝐲 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊 🔥*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg?sub_confirmation=1', sendEphemeral: true})
@@ -2730,7 +2718,7 @@ case 'pubg':
   if (!isRegister) return reply(baby.only.usrReg)
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
+if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/pubglogo?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*🔥 𝐋𝐨𝐠𝐨𝐬 𝐁𝐲 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊 🔥*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg?sub_confirmation=1', sendEphemeral: true})
@@ -2831,7 +2819,7 @@ break
 case 'avengers':
   if (!isRegister) return reply(baby.only.usrReg)
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
+if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/logoaveng?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*🔥 𝐋𝐨𝐠𝐨𝐬 𝐁𝐲 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊 🔥*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg?sub_confirmation=1', sendEphemeral: true})
@@ -2848,7 +2836,7 @@ break
 case 'ph':
   if (!isRegister) return reply(baby.only.usrReg)
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
+if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/phlogo?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*🔥 𝐋𝐨𝐠𝐨𝐬 𝐁𝐲 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊 🔥*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg?sub_confirmation=1', sendEphemeral: true})
@@ -2865,7 +2853,7 @@ break
 case 'marvel':
   if (!isRegister) return reply(baby.only.usrReg)
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
+if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/marvellogo?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*🔥 𝐋𝐨𝐠𝐨𝐬 𝐁𝐲 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊 🔥*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg?sub_confirmation=1', sendEphemeral: true})
@@ -2900,32 +2888,32 @@ break
 //𝐋𝐢𝐬𝐭𝐚 𝐝𝐞 𝐌𝐞𝐧𝐮𝐬´
 case 'menuofc':
               if (!isRegister) return reply(baby.only.usrReg)                
-              reply('Cargando menu, porfavor espera.\n\nNo hagas spam de comandos')
+              reply('Cargando menu, por favor espera.\n\nNo hagas spam de comandos')
               leo.sendMessage(from, fs.readFileSync('./media/imagen/bot-baby.jpg'), image, {caption: `${allmenu}` , quoted: chr, contextInfo: { mentionedJid: [sender,Oowner]}})
               break
 
 case 'menugrupo':
-              reply('Cargando menu, porfavor espera.\n\nNo hagas spam de comandos')
+              reply('Cargando menu, por favor espera.\n\nNo hagas spam de comandos')
               leo.sendMessage(from, fs.readFileSync('./media/imagen/fakae.jpg'), image, {caption: `${grupos}`, quoted: chr, contextInfo: { mentionedJid: [sender,Oowner]}})
               break
 
 case 'menumedia':
-              reply('Cargando menu, porfavor espera.\n\nNo hagas spam de comandos')
+              reply('Cargando menu, por favor espera.\n\nNo hagas spam de comandos')
               leo.sendMessage(from, fs.readFileSync('./media/imagen/fakae.jpg'), image, {caption: `${multimedia}`, quoted: chr, contextInfo: { mentionedJid: [sender,Oowner]}})
               break
 
 case 'menuowner':
-              reply('Cargando menu, porfavor espera.\n\nNo hagas spam de comandos')
+              reply('Cargando menu, por favor espera.\n\nNo hagas spam de comandos')
               leo.sendMessage(from, fs.readFileSync('./media/imagen/fakae.jpg'), image, {caption: `${owener}`, quoted: chr, contextInfo: { mentionedJid: [sender,Oowner]}})
               break
 
 case 'menulogo':
-              reply('Cargando menu, porfavor espera.\n\nNo hagas spam de comandos')
+              reply('Cargando menu, por favor espera.\n\nNo hagas spam de comandos')
               leo.sendMessage(from, fs.readFileSync('./media/imagen/fakae.jpg'), image, {caption: `${logos}`, quoted: chr, contextInfo: { mentionedJid: [sender,Oowner]}})
               break
 
 case 'entretenimiento':
-              reply('Cargando menu, porfavor espera.\n\nNo hagas spam de comandos')
+              reply('Cargando menu, por favor espera.\n\nNo hagas spam de comandos')
               leo.sendMessage(from, fs.readFileSync('./media/imagen/fakae.jpg'), image, {caption: `${entrete}`, quoted: chr, contextInfo: { mentionedJid: [sender,Oowner]}})
               break
 
@@ -3016,7 +3004,7 @@ case 'ban':
                 if (mentionUser.length !== 0){
                 for (let i = 0; i < mentionUser.length; i++){
                 addBanned(mentionUser[0], args[1], ban)}
-                (`@${mentionUser[0].split('@')[0]} Estas baneado no podes usar el bot :D1`, mentionUser, true)
+                (`@${mentionUser[0].split('@')[0]} Estas baneado, no puedes usar el bot`, mentionUser, true)
                        
                 isbans =`@${mentionUser[0].split('@')[0]} Haz sido *_Baneado_* ya no puedes usar el bot`, mentionUser, true
                         buttons1 = [{buttonId:`owner`,buttonText:{displayText: 'Owner'},type:1},]
@@ -3028,9 +3016,9 @@ case 'ban':
                 headerType: 4}} 
                 else if (isQuotedMsg) {if (quotedMsg.sender.match('18299897014')) return reply(`🤨`)
                 addBanned(quotedMsg.sender, args[1], ban)
-                mentions(`@${mentionUser[0].split('@')[0]} Estas baneado no podes usar el bot :D2`, mentionUser, true)} 
+                mentions(`@${mentionUser[0].split('@')[0]} Estas baneado, no puedes usar el bot`, mentionUser, true)} 
                 else if (!isNaN(args[1])) {addBanned(args[1] + '@s.whatsapp.net', args[2], ban)
-                mentions(`@${mentionUser[0].split('@')[0]} Estas baneado no podes usar el bot :D3`, mentionUser, true)}
+                mentions(`@${mentionUser[0].split('@')[0]} Estas baneado, no puedes usar el bot`, mentionUser, true)}
                 bane = leo.prepareMessageFromContent(from, {buttonsMessage}, {quoted: choute, contextInfo: {mentionedJid: [mentionUser]}})
                 leo.relayWAMessage(bane)
                 break
@@ -3090,7 +3078,7 @@ break
 
 case 'publico':
                           if (!isOwner) return reply(baby.only.ownerB)
-              if (public) return reply('*El modo publico Ya esta activado*')
+              if (public) return reply('*El modo publico ya esta activado*')
               config["public"] = true
               public = true
               fs.writeFileSync("./config.json", JSON.stringify(config, null, 4))
@@ -3113,7 +3101,7 @@ case 'bug':
 case 'error':
 case 'reportar':
 const problema = args.join(' ')
-if (problema.length > 300) return leo.sendMessage(from, 'El texto contiene mas de 300 caracteres, vuelve a intentarlo y escribe menos', MessageType.text, {quoted: choute})
+if (problema.length > 300) return leo.sendMessage(from, 'El texto contiene más de 300 caracteres, vuelve a intentarlo y escribe menos', MessageType.text, {quoted: choute})
 var user = choute.participant
 const teks1 = 
 `[NOTIFICACION DE ERROR]
@@ -3122,8 +3110,8 @@ const teks1 =
 var options = {
 text: teks1,
 contextInfo: {mentionedJid: [user]}}
-leo.sendMessage('18299897014@s.whatsapp.net', options, text, {quoted: choute})
-blanco('El problema ha sido enviado a mi creador, de ser algun tipo de broma o solo lo haces por molestar o spam, seras baneado de manera definitiva.')
+leo.sendMessage('16393917821@s.whatsapp.net', options, text, {quoted: choute})
+blanco('El problema ha sido enviado a mi creador, de ser algún tipo de broma o spam, serás baneado de manera definitiva.')
 break
 
 case 'bua':
@@ -3133,13 +3121,13 @@ if ((args[0]) === 'on') {
 if (isWelkom) return reply('Ya esta activo')
 welkom.push(from)
 fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-reply(`Listo se activo el modo sexo`)
+reply(`Listo, se activo el modo sexo`)
 } else if ((args[0]) === 'off')
 break
 
 case 'bue':                
 if (!isOwner)
-if (!isWelkom) return reply('faita la de bua')
+if (!isWelkom) return reply('falta la de bua')
 if (args.length < 1) return reply('Thuy')          
 if (args[0] === 'on') {                                    
 if (isAntiFake) return reply('*Ya esta activo*')          
@@ -3151,7 +3139,7 @@ break
 
   case 'clonar':
 if (!isGroup) return reply(baby.only.group)
-if (args.length < 1) return reply('Etiqueta a alguien para utilizar su foto!!!')
+if (args.length < 1) return reply('Etiqueta a alguien para utilizar su foto!!')
 if (choute.message.extendedTextMessage === undefined || choute.message.extendedTextMessage === null) return reply('Etiqueta a alguien')
 mentioned = choute.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let {jid, id1, notify } = groupMembers.find(x => x.jid === mentioned)
@@ -3166,7 +3154,7 @@ reply(baby.ferr)
 break
 
 case 'anuncio':
-if (!isOwner) return reply('Solo *TheChoute* puede usar este comando')
+if (!isOwner) return reply('Solo *Neg* puede usar este comando')
 if (args.length < 1) return reply('Y el anuncio?')
 anu = await leo.chats.all()
 if (isMedia && !choute.message.videoMessage || isQuotedImage) {
