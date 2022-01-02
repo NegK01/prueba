@@ -923,7 +923,7 @@ Hoy es ${week1} ${calender1}
 [🔰] Fecha: ${week1}  ${calender1}
 
 
-๑۩۞۩๑ 𝐋𝐢𝐬𝐭𝐚 𝐝𝐞 𝐌𝐞𝐧𝐮..๑۩۞۩๑
+๑۩۞۩๑ *_Lista de Menu_*๑۩۞۩๑
 
 [📧] ${prefix}menugrupo
 [📧] ${prefix}menumedia
@@ -980,7 +980,6 @@ if (choute.message.buttonsResponseMessage){
     mediaUrl: "https://www.youtube.com/watch?v=fzV_QZODisQ"}}}) 
     addFilter(from)
       addLevelingLevel(sender, 5)	}}
-
     
       if(body == ('Leo')) 
       if (!isOwner)
@@ -998,14 +997,15 @@ if (test.includes(`grupo`)){
   leo.sendMessage(from, `
   *-Te invito a unirte al grupo de WhatsApp donde:-*
   
-  💭:Se avisa sobre nuevas actualizaciones 
+  *Se avisa sobre nuevas actualizaciones*
   
-  💭:Puedes probar tu propio bot
+  *Puedes probar funciones betas*
   
-  💭:Se ayuda a quienes tengas problemas
+  *Se ayuda a quienes tengan problemas*
   
   Grupo 1 : 
   _https://chat.whatsapp.com/DPAHNRMhool84aBWoIzIPR_
+  
   
   Grupo 2 : 
   _https://chat.whatsapp.com/DPAHNRMhool84aBWoIzIPR_`, MessageType.text, {quoted: choute})
@@ -1029,8 +1029,8 @@ if (test.includes(`grupo`)){
         "rowId": `miperfil`
         },
         {
-        "title": 'Recomendaciones',
-        "rowId": `recomendaciones`
+        "title": 'Reglas',
+        "rowId": `reglas`
         },
         {
         "title": 'Menu Completo',
@@ -1090,11 +1090,7 @@ if (test.includes(`grupo`)){
         {
         "title": 'Como Instalar Este Bot',
         "rowId": `install`
-        },
-	{
-        "title": 'Canal',
-        "rowId": `Ch`
-        },
+        }
         ]    
         }
         ],
@@ -1148,7 +1144,7 @@ its = await getBuffer (ppimg)
 //Reglas
 if (choute.message.listResponseMessage){
   test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
-  if (test.includes(`recomendaciones`)){
+  if (test.includes(`reglas`)){
   leo.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(baby.only.usrReg)
 tampa = leo.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": `${reglas}`, "footerText": "*NegBot*", "thumbnail": fs.readFileSync('./media/imagen/imgregla.jpg'), "surface": 'CATALOG' }}, {contextInfo: { mentionedJid: [sender,Oowner]}, quoted:choute, })
