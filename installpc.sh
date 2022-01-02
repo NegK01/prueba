@@ -23,9 +23,9 @@ echo -e '\e[1;32m
 Descarga Completada al 100%
 En caso que presente algun error al iniciar escribe
 npm i
-Creador: Thechoute
-Numero: +18299897014
-Instagram: the_choute_
-Youtube: https://www.youtube.com/c/thechout
-Escribe node thechoute para iniciar el bot
+Creador: Neg
+Numero: +16393917821
+Instagram: -----
+Youtube: https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw
+Escribe npm start para iniciar el bot
 En caso que el bot presente algun problema, comunicate con el creador su numero esta mas arriba'
