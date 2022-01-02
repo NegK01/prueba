@@ -1,6 +1,6 @@
 {
-  "name": "BabyBechoso",
-  "version": "99999.9.9",
+  "name": "NegBot",
+  "version": "25.0",
   "description": "Termux only",
   "main": "thechoute.js",
   "directories": {
@@ -45,6 +45,6 @@
   "scripts": {
     "start": "node thechoute.js"
   },
-  "author": "The Choute",
-  "homepage": "https://github.com/thechoute/Baby-Ofc/readme"
+  "author": "Neg",
+  "homepage": "https://github.com/NegK01/Beta23#readme"
 }
