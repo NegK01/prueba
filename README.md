@@ -11,12 +11,12 @@ Instala los archivos necesarios
 
 Clona este repositorio
  ```bash
-> git clone https://github.com/thechoute/Baby-Ofc
+> git clone https://github.com/NegK01/Beta23
 ```
 
 Inicia la instalacion
 ```bash
-- cd Baby-Ofc
+- cd Beta23
 - bash install.sh
 ```
 Nota: Si la instalacion sera en Pc, utiliza
@@ -26,7 +26,7 @@ Nota: Si la instalacion sera en Pc, utiliza
 
 Para Iniciar el Bot
  ```bash
-- node thechoute
+- npm start
 ```
 ### PARA WINDOWS/VPS/RDP USER💻
 
