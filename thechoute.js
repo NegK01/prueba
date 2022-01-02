@@ -204,16 +204,8 @@ Recuerda siempre seguir las reglas y mantener una formalidad respetuosa.`
     let buff = await getBuffer(ppimg)
     //leo.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 
-    leo.sendMessage(mdata.id, buff, MessageType.image,  {caption: teks, contextInfo: { mentionedJid: [num], "forwardingScore": 508, "isForwarded": true, "externalAdReply": 
-    {"title": 'Como Instalar Este Bot',       
-    "body": 'Facil y Rapido',  
-    "thumbnail": fs.readFileSync('./media/imagen/youtube-mi.jpg'),
-    "sourceUrl": 'www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw'}}})
-    }
-    } catch (e) {
-    console.log('Error : %s', color(e, 'red'))
-    }
-    }) 
+    leo.sendMessage(mdata.id, buff, MessageType.image,  {caption: teks, contextInfo: { mentionedJid: [num]}})
+
     
 leo.on('chat-update', async(choute) => {
   try {
