@@ -1,6 +1,6 @@
 {
-  "name": "BabyBechoso",
-  "version": "99999.9.9",
+  "name": "NegBot",
+  "version": "23.0",
   "description": "Termux only",
   "main": "thechoute.js",
   "directories": {
