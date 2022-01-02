@@ -557,7 +557,7 @@ const chr = {
   },
   "title": `${yo} | NegBot`,
   "description": "",
-  "currencyCode": "L&J",
+  "currencyCode": "Neg",
   "priceAmount1000": "9999999999999999",
   "retailerId": "",
   "productImageCount": 999
@@ -588,7 +588,7 @@ Si quieres agradecer o realizar una donación puedes hacerlo, subcribiendote a m
 _https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1_
 
 ★·.·¯·.·★ *INSTAGRAM* ★·.·´¯·.·★
-https://www.instagram.com/the_choute_/
+no existe, por ahora
 
 ★·.·¯·.·★ *GITHUB* ★·.·¯·.·★
 https://github.com/NegK01`
@@ -817,7 +817,7 @@ INFO DE MI CREADOR
 https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1
 
 *Instagram:*
-https://www.instagram.com/the_choute_/
+no hay, por ahora
 
 *Github:*
 https://github.com/NegK01
@@ -2109,7 +2109,7 @@ its = await getBuffer (ppimg)
     {"title": 'Sigueme en Instagram',       
     "body": 'Subcribete Te Podria Interesar',  
     "thumbnail": fs.readFileSync('./media/imagen/ldeadnote.png'),
-    "sourceUrl": 'https://www.youtube.com/channel/UC-HPutaDGeTPjrCId0bXQgg?sub_confirmation=1'}}})
+    "sourceUrl": 'https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1'}}})
     break
 case 'top5':
 
