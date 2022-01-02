@@ -1005,7 +1005,7 @@ if (test.includes(`grupo`)){
   
   Grupo 1 : 
   _https://chat.whatsapp.com/DPAHNRMhool84aBWoIzIPR_
-  
+
   
   Grupo 2 : 
   _https://chat.whatsapp.com/DPAHNRMhool84aBWoIzIPR_`, MessageType.text, {quoted: choute})
@@ -1495,7 +1495,7 @@ Verificación completa usa *${prefix}menu* para ver el Menu`
 case 'menu':
                 if (!isRegister) return reply(baby.only.usrReg)
                 if (isBan) return reply (baby.only.benned)	
-                reply('Cargando Menu, Porfavor no hacer spam de mensaje')
+                reply('Cargando Menu, Por favor no hacer spam de mensaje')
                txtt =`${cmenu}`              
                 sendButLocation(from, `${txtt}`, `Creador @${Oowner.split("@")[0]}`, fs.readFileSync("./media/imagen/absu.jpg"),
                 buttons =[ {buttonId:`ml`,buttonText:{displayText: 'Lista de Menus'},type:1},
