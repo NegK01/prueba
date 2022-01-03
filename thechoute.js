@@ -1757,7 +1757,7 @@ case 'stag':
             if (isBan) return reply (baby.only.benned)	
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)
-                          if (!isQuotedImage && !isImage) return await reply('Y el sticker? :D')
+                          if (!isQuotedImage && !isImage) return await reply('Comando inhabilitado')
                           media = isQuotedSticker ? JSON.parse(JSON.stringify(choute).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : choute
                           buffer = await leo.downloadMediaMessage(media)
                           await wa.hideTagSticker(from, buffer)
@@ -1826,7 +1826,7 @@ case 'sticker':
                   .addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
                   .toFormat('webp')
                   .save(ran)
-                  } else { reply(`Envíe una imagen con la etiqueta ${prefix} del título o una etiqueta de imagen que haya sido enviada \nLa duración de la etiqueta de video es de 1 a 9 segundos...`)}
+                  } else { reply(`Envíe una imagen junto al comando ${prefix} o etiqueta una imagen que haya sido enviada \nLa duración de un video debe ser 1 a 9 segundos. (Stickers Animados BETA, puede no funcionar)`)}
                   break
 
 case 'scarcel':
