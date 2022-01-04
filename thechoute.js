@@ -1920,12 +1920,9 @@ case 'ytmp3':
               })	
               let thumbInfo = ` [ *${res1.all[0].title}* ]
 *Subido* ${res1.all[0].ago}
-*Vistas :* ${res1.all[0].views}
-*Duracion :* ${res1.all[0].timestamp}
 *Canal :* ${res1.all[0].author.name}
-*°Link del Canal :* ${res1.all[0].author.url}
-*Elaudio se esta enviando*
-No hagas spam del comando_` 
+*El audio se esta enviando*
+_No hagas spam del comando_` 
               sendFileFromUrl(res1.all[0].image, image, {quoted: choute, caption: thumbInfo})
               res1 = await y2mateA(res1.all[0].url).catch(e => {
               pr21 = getJson(`https://api.zeks.xyz/api/ytmp3?apikey=hamilton20&url=${res1.all[0].url}`)	
@@ -2021,7 +2018,7 @@ case 'chiste':
 case 'doxxeo':
             if (isBan) return reply (baby.only.benned)	
             if (!isRegister) return reply(baby.only.usrReg)
-            reply(`.play https://www.youtube.com/watch?v=u2FuF5yPcPM`)
+            reply(`.play Oruga del Doxeo Plantilla meme| HD|`)
             respuesta = [`IP: 92.28.211.234 \nN: 43.7462 \nW:12.4893 \nSS Number: 6979191519182010 \nIPv6: fe80::5dcd::ef69::fb22::d9888 \nUPNP: Enabled \nDMZ: 10.112.42.15 \nMAC 5A:783E:7E:D0 \nISP: Ucom Unversal \nDNS: 8.8.8.8 \nALT DNS: 1.1.1.8.1 \nDNS SUFFIX: Dlink \nWAN TYPE: Private Nat \nGATEWAY: 192.168.0.1 \nSUBNET MASK: 225.225.0.251 \nUDP OPEN PORTS: 8080.80` ]
             answer = respuesta[Math.floor(Math.random() * respuesta.length)]
             reply(answer)
