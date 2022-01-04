@@ -492,7 +492,7 @@ month: 'long',
 year: 'numeric'
 })  
 if (isOwner) {
-	var tipoDeUsr = '*⚜️Ownwer⚜️*'
+	var tipoDeUsr = '*⚜️Owner⚜️*'
 	} else if (sender == isAdmin) {
 	var tipoDeUsr = '*👑Admin*'
 	 } else {
@@ -593,7 +593,7 @@ no existe, por ahora
 ★·.·¯·.·★ *GITHUB* ★·.·¯·.·★
 https://github.com/NegK01`
 const quecanciones = `
-Porfavor, es nesesario que envies el link de la musica para poder continuar, si no sabes como sacar el link de un audio.
+Por favor, es nesesario que envies el link de la musica para poder continuar, si no sabes como sacar el link de un audio.
 
 _Puedes ver el siguiente video_
 __
@@ -637,7 +637,7 @@ Buenas tardes🌇 _@${sender.split('@')[0]}_
 [⚜️] Chat Totales: ${totalchat.length}`
 
 const extra = `
-๑۩۞۩๑ 𝐎𝐰𝐧𝐞𝐫 𝐨 𝐁𝐨𝐭..๑۩۞۩๑
+๑۩۞۩๑ *_Owner o Bot_* ๑۩۞۩๑
 
 ||- *_-Banear Usuario del Bot-_*
 
@@ -646,7 +646,7 @@ const extra = `
 [⚜️] ${prefix}autokick
 
 `
-const entrete = `๑۩۞۩๑ 𝐉𝐮𝐞𝐠𝐨𝐬/𝐄𝐧𝐭𝐫𝐞𝐭𝐞𝐧𝐢𝐦𝐢𝐞𝐧𝐭𝐨.๑۩۞۩๑
+const entrete = `๑۩۞۩๑ *_Juegos/Entretenimiento_* ๑۩۞۩๑
 
 ||- *_-Verdad O Reto-_*
 
@@ -680,7 +680,7 @@ _Si el bot presenta algun fallo, notificarlo a @${Oowner.split('@')[0]}_
 `
 
 const owener = `
-๑۩۞۩๑ 𝐎𝐰𝐧𝐞𝐫 𝐨 𝐁𝐨𝐭..๑۩۞۩๑
+๑۩۞۩๑ *_Owner o Bot_* ๑۩۞۩๑
 
 ||- *_-Banear Usuario del Bot-_*
 
@@ -711,7 +711,7 @@ _Uso bajo su propia responsabilidad_
 
 const grupos =  `||- *_-GRUPOS-_*
 
-๑۩۞۩๑ 𝐀𝐝𝐦𝐢𝐧𝐢𝐬𝐭𝐫𝐚...๑۩۞۩๑
+๑۩۞۩๑ *_Administradores_* ๑۩۞۩๑
 
 ||- *_-Menciones-_*
 
@@ -749,7 +749,7 @@ const grupos =  `||- *_-GRUPOS-_*
 [🛡️] ${prefix}antisticker on / off
 [🛡️] ${prefix}antileg on/off 
 
-๑۩۞۩๑ Public...๑۩۞۩๑
+๑۩۞۩๑ *_Publico_* ๑۩۞۩๑
 
 ||- *_-Acciones de Usuarios-_*
 
@@ -766,7 +766,7 @@ const grupos =  `||- *_-GRUPOS-_*
 [🛡️] ${prefix}onlie
 `
 
-const multimedia = `๑۩۞۩๑ 𝐌𝐮𝐥𝐭𝐢𝐦𝐞𝐝𝐢𝐚..๑۩۞۩๑
+const multimedia = `๑۩۞۩๑ *_Multimedia_* ๑۩۞۩๑
 
 ||- *_-Busqueda de Imagen-_*
 
@@ -851,7 +851,7 @@ Mi creador es @${Oowner.split('@')[0]}
 *Youtube:* www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw`
 
 const registro = `
-*PORFAVOR ESCRIBE BIEN EL FORMATO DE REGISTRO:* 
+*POR FAVOR ESCRIBE BIEN EL FORMATO DE REGISTRO:* 
 ${prefix}reg *Nombre|Edad* 
 Con el *|* que los divide.
 `
@@ -972,7 +972,7 @@ ${owener}
 if (choute.message.buttonsResponseMessage){
   test = choute.message.buttonsResponseMessage.selectedButtonId
   if (test.includes(`sex`)){
-    reply('*Cargando Proceso de Instalacion*\nPorfavor esperar.')
+    reply('*Cargando Proceso de Instalacion*\nPor favor esperar.')
     leo.sendMessage(from, `${install}`, MessageType.text, {quoted: choute, caption: `El video sera subido pronto en el canal de `, contextInfo: {"forwardingScore": 508, "isForwarded": true, "externalAdReply": 
     {"title": `Hola ${pushname} 👋🏻`, 
     "body": `MIRA EL VIDEO COMPLETO`, "mediaType": 2, 
@@ -1841,7 +1841,7 @@ anuc = await imgbb2c("20a14861e4f7591f3dc52649cb07ae02", './stickc.jpeg')
 txtc = `${anuc.display_url}`
 sc = await getBuffer(`https://pecundang.herokuapp.com/api/jail?url=${txtc}`)
 const bas642c = `data:image/jpeg;base64,${sc.toString('base64')}`
-var mantap2c = await convertSticker(bas642c, `⛓ 入狱！！ = ${sender[0].split('@')[0]}`, `The Choute| Baby`)
+var mantap2c = await convertSticker(bas642c, `Empresa Maurisios`)
 var imageBuffer2c = new Buffer.from(mantap2c, 'base64');
 leo.sendMessage(from, imageBuffer2c, sticker, {quoted: choute, sendEphemeral: true})
 fs.unlinkSync('./stickc.jpeg')
@@ -1944,11 +1944,11 @@ case 'ytmp4':
                 if (!isRegister) return reply(baby.only.usrReg)
                 if (isBan) return reply (baby.only.benned)	
                 if (args.length < 1) return reply('Y el link?')
-                if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Eu debes de darme el link de *YOUTUBE*')
+                if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Debes de darme el link de *YOUTUBE*')
                 teks = args.join(' ')
                 reply(baby.wait)
                 resyv = await y2mateV(teks).catch(e => {
-                reply('_ERROR :D, intentalo _')
+                reply('_ERROR, intentalo de nuevo_')
                 })
                 result = `「  ${yo} 」
 *°Titulo :* ${resyv[0].judul}
@@ -1995,7 +1995,7 @@ case 'adminslist':
 case 'soporte':
 case 'support':
             if (!isRegister) return reply(baby.only.usrReg)
-            baby = `*Grupo soporte del Bot:*\n\n${gpwha}`
+            baby = `*Grupo de soporte:*\n\n${gpwha}`
             reply(baby) 
             break
 
@@ -2012,7 +2012,17 @@ case 'enlace':
 case 'chiste':
             if (isBan) return reply (baby.only.benned)	
             if (!isRegister) return reply(baby.only.usrReg)
-            respuesta = [`¿Cuál es el colmo de un ciego?\n Enamorarse a primera vista.`, `*¿Qué le dijo un zapato a otro?* \n - Qué vida más arrastrada llevas. \n ¡MIRA LOS ZAPATOS QUE EXISTEN PARA ANDAR POR EL TECHO!`, `¿Qué le dijo un cable a otro cable? \n Somos los intocables.`, `*¿Qué le dijo batman al papel higiénico?* \n Tu eres el único que conoce mi baticueva.`, `¿Por qué llora un libro de matemáticas? \n ¡Porque tiene muchos problemas!`, `¿Qué está al final de todo? ¡La letra o!`, `¿Por qué el profe de música tiene una escalera? \n ¡Para poder llegar a las notas más altas!`, `¿Qué le dice una iguana a su hermana gemela? \n Somos iguanitas`, `*¿Cuál es el colmo del electricista?* \n ¡Que su mujer se llame Luz!`, `¿Cómo se dice pañuelo en japonés? \n Sacamoko`, `¿Cuál es el pez que huele mucho? \n ¡Peztoso!`, `¿Sabes cómo se queda un mago después de comer? \n Magordito` ]
+            respuesta = [`*Buenos días, me gustaría alquilar "Batman Forever".*\n No es posible, tiene que devolverla tomorrow.`, `*¿Qué le dijo un zapato a otro?* \n Qué vida más arrastrada llevas.`, `¿Qué le dice un techo a otro? \n Techo de menos.`, `*¿Qué le dijo batman al papel higiénico?* \n Tu eres el único que conoce mi baticueva.`, `— Buenos días, quería una camiseta de un personaje inspirador. \n — ¿Ghandi? \n — No, mediani.`, `*¿Qué le dice un árbol a otro?* \n ¡Qué pasa tronco!`, `*¿Qué hace un mudo bailando?* \n Una mudanza.`, `¿Qué le dice una iguana a su hermana gemela? \n Somos iguanitas`, `*Doctor, soy asmático, ¿es grave?* \n No amigo, es esdrújula.`, `*¿Qué le dice la foca a su madre?* \n I love you, mother foca.`, `*¿Sabes que le dice un .gif a un .jpg?* \n ¡Anímate hombre!`, `Ayer me caí y pensé que me había roto el peroné… \n ¡Peronó!` ]
+            answer = respuesta[Math.floor(Math.random() * respuesta.length)]
+            reply(answer)
+            addFilter(from)
+            break
+
+case 'doxxeo':
+            if (isBan) return reply (baby.only.benned)	
+            if (!isRegister) return reply(baby.only.usrReg)
+            reply(`.play https://www.youtube.com/watch?v=u2FuF5yPcPM`)
+            respuesta = [`IP: 92.28.211.234 \nN: 43.7462 \nW:12.4893 \nSS Number: 6979191519182010 \nIPv6: fe80::5dcd::ef69::fb22::d9888 \nUPNP: Enabled \nDMZ: 10.112.42.15 \nMAC 5A:783E:7E:D0 \nISP: Ucom Unversal \nDNS: 8.8.8.8 \nALT DNS: 1.1.1.8.1 \nDNS SUFFIX: Dlink \nWAN TYPE: Private Nat \nGATEWAY: 192.168.0.1 \nSUBNET MASK: 225.225.0.251 \nUDP OPEN PORTS: 8080.80` ]
             answer = respuesta[Math.floor(Math.random() * respuesta.length)]
             reply(answer)
             addFilter(from)
@@ -2032,11 +2042,11 @@ its = await getBuffer (ppimg)
 `${timeFt} @${sender.split('@')[0]}
 _A continuación te muestro, mi creador, en especial responderá mensajes *no spam* _
 
-☎️ *Número* : @${Oowner.split("@")[0]}
-📋 *INFO:* ${tu.status}
-🌐 *Instagram* : ${instaneg}
-🌐 *Github:* ${gitneg}
-🌐 *Youtube:* www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw\nCualquier apoyo me serviria de mucho`, contextInfo: { mentionedJid: [Oowner, sender], "forwardingScore": 508, "isForwarded": true, "externalAdReply": 
+*Número* : @${Oowner.split("@")[0]}
+*INFO:* ${tu.status}
+*Instagram* : ${instaneg}
+*Github:* ${gitneg}
+*Youtube:* www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw\nCualquier apoyo me serviria de mucho`, contextInfo: { mentionedJid: [Oowner, sender], "forwardingScore": 508, "isForwarded": true, "externalAdReply": 
     {"title": 'Canal de Mi Creador',       
     "body": 'Subcribete Te Podria Interesar',  
     "thumbnail": fs.readFileSync('./media/imagen/ldeadnote.png'),
@@ -2047,7 +2057,7 @@ _A continuación te muestro, mi creador, en especial responderá mensajes *no sp
 case 'vor':
             if (!isRegister) return reply(baby.only.usrReg)
             if (isBan) return reply (baby.only.benned)	
-              txtt =`*𝗩𝗘𝗥𝗗𝗔𝗗 𝗢 𝗥𝗘𝗧𝗢*\n𝗩𝗘𝗥𝗗𝗔𝗗: .v r\n𝗥𝗘𝗧𝗢: .r v`
+              txtt =`*VERDAD O RETO*`
             buttons1 = [{buttonId:`verdad`,buttonText:{displayText: 'Verdad'},type:1},
                         {buttonId:`reto`,buttonText:{displayText: 'Reto'},type:1}]
             imageMsg = (await leo.prepareMessageMedia(fs.readFileSync(`./media/imagen/vor.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/imagen/fake.jpg`)})).imageMessage
@@ -2093,13 +2103,13 @@ case 'miperfil':
     
 		teks = 
 
-`👤 *Nombre* : ${pushname}
-☎️ *Número* : @${sender.split("@")[0]}
-🌐 *Link* : wa.me/${sender.split("@")[0]}
-🗣️ *Tipo de Usuario* : ${tipoDeUsr}
-⚙️ *Nivel* : ${getLevel1}
-🎖️ *Rango* : ${rango}
-📋 *INFO:* ${tu.status}
+`*Nombre* : ${pushname}
+*Número* : @${sender.split("@")[0]}
+*Link* : wa.me/${sender.split("@")[0]}
+*Tipo de Usuario* : ${tipoDeUsr}
+*Nivel* : ${getLevel1}
+*Rango* : ${rango}
+*INFO:* ${tu.status}
 `
 its = await getBuffer (ppimg)
     leo.sendMessage(from,  its, image,  {thumbnail:fs.readFileSync('./media/imagen/Faketumber.jpg'), quoted: choute, caption: teks, contextInfo: { mentionedJid: [sender], "forwardingScore": 508, "isForwarded": true, "externalAdReply": 
@@ -2170,7 +2180,7 @@ case 'quemusicaes':
   if (!isRegister) return reply(baby.only.usrReg)
   if (isBan) return reply (baby.only.benned)	
                 if (!q) return reply(`${quecanciones}`)
-              if (!isUrl) return reply('Porfavor envia especificamente un link de la musica')
+              if (!isUrl) return reply('Por favor envia especificamente un link de la musica')
               reply(baby.wait)
               musica = await getJson(`https://api.lolhuman.xyz/api/musicsearch?apikey=${api}&file=${q}`)
               p = musica.result              
@@ -2202,7 +2212,7 @@ case 'imagen':
   if (isBan) return reply (baby.only.benned)	  
                 
               //if (args.length < 1) return reply('Que deseas buscar?')
-              reply(`Porfavor espera un momento mientras busco imagenes de ` + args.join(' '))
+              reply(`Por favor espera un momento mientras busco imagenes de ` + args.join(' '))
               ggimg = args.join(' ')
               res = LeoGgImg(ggimg, google)
               function google(error, result){
@@ -2344,8 +2354,8 @@ case 'reversa':
 if (!isRegister) return reply(baby.only.usrReg)
   if (isBan) return reply (baby.only.benned)	
   if (!isRegister) return reply(baby.only.usrReg)
-if (!isQuotedVideo) return reply('Porfavor etiqueta un video con el comando!')
-reply('*Espera un momento porfavor....*')
+if (!isQuotedVideo) return reply('Por favor etiqueta un video con el comando!')
+reply('*Espera un momento por favor....*')
 encmediav = JSON.parse(JSON.stringify(choute).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav = await leo.downloadAndSaveMediaMessage(encmediav)
 ran = getRandom('.mp4')
@@ -2647,7 +2657,7 @@ case 'lobo':
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
+reply(`*Por favor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/wolflogo?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜️*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1', sendEphemeral: true})
 break
@@ -2711,7 +2721,7 @@ case 'pubg':
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
+reply(`*Por favor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/pubglogo?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜️*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1', sendEphemeral: true})
 break
@@ -2812,7 +2822,7 @@ case 'avengers':
   if (!isRegister) return reply(baby.only.usrReg)
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
+reply(`*Por favor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/logoaveng?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜️*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1', sendEphemeral: true})
 break	
@@ -2829,7 +2839,7 @@ case 'ph':
   if (!isRegister) return reply(baby.only.usrReg)
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
+reply(`*Por favor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/phlogo?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜️*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1', sendEphemeral: true})
 break		
@@ -2846,7 +2856,7 @@ case 'marvel':
   if (!isRegister) return reply(baby.only.usrReg)
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
+reply(`*Por favor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/marvellogo?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜️*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1', sendEphemeral: true})
 break	
@@ -2870,8 +2880,8 @@ break
 case 'gtext':
   if (!isRegister) return reply(baby.only.usrReg)
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
+if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
+reply(`*Por favor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
 logo = `https://api.zeks.xyz/api/gtext?apikey=apivinz&text1=${texto1}&text2=${texto2}`
 sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜️*\n*CANAL DEL CREADOR:*\nhttps://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1', sendEphemeral: true})
 break
@@ -2986,7 +2996,7 @@ case 'banchat':
                   fs.writeFileSync('./src/ban.json', JSON.stringify(chatban))
                   reply('*♻Este chat a dejado de ser baneado*')
                   } else {
-                  reply(`Porfavor escriba bien el comando: ${prefix}banchat *0/1*`)
+                  reply(`Por favor escriba bien el comando: ${prefix}banchat *0/1*`)
                   }
                   break
 
