@@ -1912,7 +1912,6 @@ case 'play':
 case 'ytmp3':
               if (!isRegister) return reply(baby.only.usrReg)
               if (isBan) return reply (baby.only.benned)	
-              reply(`Espere un momento, su audio ${q} se esta descargando...`)
               teks = args.join(' ')
               if (!teks.endsWith("-doc")){
               res1 = await yts(q).catch(e => {	
@@ -2317,14 +2316,8 @@ case 'idiomas':
 case 'meme':
                 leo.updatePresence(from, Presence.composing)
                 if (!isRegister) return reply(baby.only.usrReg)            
-                try {
-                beh = await getJson(`https://meme-api.herokuapp.com/gimme/memesmexico`)
-                pint = await getBuffer(`${beh.url}`)
-                reply(baby.wait)
-                leo.sendMessage(from, pint, image, {
-                quoted: choute, caption: `${beh.title}`, contextInfo: {"forwardingScore": 9999, "isForwarded": true}
-                })
-                  
+                try {                
+              leo.sendMessage(from, fs.readFileSync('./media/imagen/text.jpg'), image)
                 } catch {
                   reply('Intentalo de nuevo mas tarde...')
                 }
