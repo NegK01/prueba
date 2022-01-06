@@ -4,9 +4,9 @@
 Instala los archivos necesarios
 ```bash
 - pkg upgrade && update
-- pkg install nodejs
-- pkg install git
-- pkg install bash
+- pkg install nodejs -y
+- pkg install git -y
+- pkg install bash -y
 ```
 
 Clona este repositorio
@@ -34,3 +34,7 @@ Para Iniciar el Bot
 - Pulsa Para Instalar NodeJS [`Click Here`](https://nodejs.org/en/download) <br>
 - Pulsa Para Instalar FFMPEG [`Click Here`](https://ffmpeg.org/download.html) 
 - Pulsa Para Instalar ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
+
+### Recode: Neg
+##: Script: @TheChoute
+
