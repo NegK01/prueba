@@ -35,6 +35,6 @@ Para Iniciar el Bot
 - Pulsa Para Instalar FFMPEG [`Click Here`](https://ffmpeg.org/download.html) 
 - Pulsa Para Instalar ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
 
-### Recode: Neg
-### Script: @TheChoute
+## Recode: Neg
+## Script: @TheChoute
 
