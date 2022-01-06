@@ -36,5 +36,5 @@ Para Iniciar el Bot
 - Pulsa Para Instalar ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
 
 ### Recode: Neg
-##: Script: @TheChoute
+## Script: @TheChoute
 
