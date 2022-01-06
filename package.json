@@ -1,6 +1,6 @@
 {
   "name": "NegBot",
-  "version": "23.0",
+  "version": "99999.9.9",
   "description": "Termux only",
   "main": "thechoute.js",
   "directories": {
