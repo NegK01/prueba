@@ -650,16 +650,16 @@ const entrete = `๑۩۞۩๑ *_Juegos/Entretenimiento_* ๑۩۞۩๑
 
 ||- *_-Verdad O Reto-_*
 
-[💈] ${prefix}vor
+[⚜️] ${prefix}vor
 
 ||- *_-Top-_*
 
-[💈] ${prefix}top5 (Texto)
+[⚜️] ${prefix}top5 (Texto)
 Ejemplo:
 ${prefix}top5 Feos
 
 ||- *_-El bot te cuenta un chiste-_*
-[💈] ${prefix}chiste
+[⚜️] ${prefix}chiste
 
 `
 
@@ -862,10 +862,10 @@ Si tienes dudas o necesitas alguna ayuda siempre le puedes hablar a mi creador @
 De preferencia solo hablare si realmente necesitas algo.
 
 ♻️ *DATOS DEL GRUPO*
-[💈] Nombre: _${groupMetadata.subject}_
-[💈] Administradores: _${groupAdmins.length}_
-[💈] Miembros: _${groupMembers.length - groupAdmins.length }_
-[💈] Total de Participantes: _${groupMembers.length}_
+[⚜️] Nombre: _${groupMetadata.subject}_
+[⚜️] Administradores: _${groupAdmins.length}_
+[⚜️] Miembros: _${groupMembers.length - groupAdmins.length }_
+[⚜️] Total de Participantes: _${groupMembers.length}_
 `
 const install = 
 `*PROCESO DE INSTALACION DEL BOT*
@@ -1015,7 +1015,7 @@ if (test.includes(`grupo`)){
     if (choute.message.buttonsResponseMessage){
       test = choute.message.buttonsResponseMessage.selectedButtonId
       if (test.includes(`ml`)){
-        if (!isRegister) return reply(baby.only.usrReg)
+        
         let lista = leo.prepareMessageFromContent(from,{
         "listMessage": {
         "description": `${menue}`,
@@ -1106,7 +1106,7 @@ if (test.includes(`grupo`)){
           test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
           if (test.includes(`promoepikas`)){
           leo.updatePresence(from, Presence.composing)
-          if (!isRegister) return reply(baby.only.usrReg)
+          
 //leo.sendMessage(from, fs.readFileSync('./media/imagen/epika.jpg'), image, {qouted: choute, caption: `}`})
 leo.sendMessage(from, fs.readFileSync('./media/imagen/epika.jpg'), image, {caption: `${promoepika}`, quoted: choute})
 
@@ -1118,7 +1118,7 @@ if (choute.message.listResponseMessage){
   test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
   if (test.includes(`miperfil`)){
   leo.updatePresence(from, Presence.composing)
-  if (!isRegister) return reply(baby.only.usrReg)
+
   uptime = process.uptime()
     try {
     ppimg = await leo.getProfilePicture(`${sender.split('@')[0]}@c.us`)
@@ -1127,10 +1127,10 @@ if (choute.message.listResponseMessage){
     }
     teks = 
 
-`👤 *Nombre* : ${pushname}
-☎️ *Número* : @${sender.split("@")[0]}
-🌐 *Link* : wa.me/${sender}
-🎖️*Rango* : ${rango}
+`*Nombre* : ${pushname}
+*Número* : @${sender.split("@")[0]}
+*Link* : wa.me/${sender}
+*Rango* : ${rango}
 *Info* : __
 `
 its = await getBuffer (ppimg)
@@ -1146,7 +1146,7 @@ if (choute.message.listResponseMessage){
   test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
   if (test.includes(`reglas`)){
   leo.updatePresence(from, Presence.composing)
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 tampa = leo.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": `${reglas}`, "footerText": "*NegBot*", "thumbnail": fs.readFileSync('./media/imagen/imgregla.jpg'), "surface": 'CATALOG' }}, {contextInfo: { mentionedJid: [sender,Oowner]}, quoted:choute, })
 leo.relayWAMessage(tampa)
   addFilter(from)
@@ -1157,7 +1157,7 @@ if (choute.message.listResponseMessage){
   test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
   if (test.includes(`admin`)){
   leo.updatePresence(from, Presence.composing)
-  if (!isRegister) return reply(baby.only.usrReg)
+  
   reply('Cargando comandos para grupos, por favor espera.')
   txtt =`${texto}\n${grupos}`
   buttons1 = [{buttonId:`listadmin`,buttonText:{displayText: 'Lista de Administradores'},type:1},]
@@ -1176,7 +1176,7 @@ if (choute.message.listResponseMessage){
   test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
   if (test.includes(`allmenu`)){
   leo.updatePresence(from, Presence.composing)
-  if (!isRegister) return reply(baby.only.usrReg)    
+   
   reply('Cargando Menu Completo, No Hagas Spam')            
   txtt =
   `${texto}\n${allmenu}`
@@ -1197,7 +1197,7 @@ if (choute.message.listResponseMessage){
 test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
 if (test.includes(`menuowner`)){
 leo.updatePresence(from, Presence.composing)
-if (!isRegister) return reply(baby.only.usrReg)
+
 uptime = process.uptime()
 leo.sendMessage(from, fs.readFileSync('./media/imagen/cower.jpg') , MessageType.image, {caption: `${texto}\n${owener}`, quoted: choute,  contextInfo: { mentionedJid: [sender,Oowner]} })  
 addFilter(from)
@@ -1207,7 +1207,7 @@ addLevelingLevel(sender, 5)	}}
     test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
     if (test.includes(`menumedia`)){
     leo.updatePresence(from, Presence.composing)
-    if (!isRegister) return reply(baby.only.usrReg)
+    
     uptime = process.uptime()
     reply('Cargando Menu Multimedia...')
     leo.sendMessage(from, fs.readFileSync('./media/imagen/multimedia.jpg') , MessageType.image, {caption: `${texto}\n${multimedia}`, quoted: choute,  contextInfo: { mentionedJid: [sender,Oowner]} })  
@@ -1219,7 +1219,7 @@ addLevelingLevel(sender, 5)	}}
     test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
     if (test.includes(`entrenimiento`)){
     leo.updatePresence(from, Presence.composing)
-    if (!isRegister) return reply(baby.only.usrReg)
+   
     uptime = process.uptime()
     leo.sendMessage(from, fs.readFileSync('./media/imagen/izu.jpg'), MessageType.image, {caption: `${texto}\n${entrete}`,quoted: choute,  contextInfo: { mentionedJid: [sender,Oowner]} })  
     addFilter(from)
@@ -1229,9 +1229,9 @@ addLevelingLevel(sender, 5)	}}
     test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
     if (test.includes(`Logos`)){
     leo.updatePresence(from, Presence.composing)
-    if (!isRegister) return reply(baby.only.usrReg)
+   
     uptime = process.uptime()
-    leo.sendMessage(from, fs.readFileSync(`media/imagen/baby.png`), image, {quoted: choute, caption:`🔥 𝑳𝑰𝑺𝑻𝑨 𝑫𝑬 𝑳𝑶𝑮𝑶𝑺 🔥 \n${texto}\n${logos}`})  
+    leo.sendMessage(from, fs.readFileSync(`media/imagen/baby.png`), image, {quoted: choute, caption:`⚜️ *_Lista de Logos_*⚜️ \n${texto}\n${logos}`})  
     addFilter(from)
     addLevelingLevel(sender, 5)	}}
 
@@ -1242,7 +1242,7 @@ if (choute.message.listResponseMessage){
   test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
   if (test.includes(`creador`)){
   leo.updatePresence(from, Presence.composing)
-  if (!isRegister) return reply(baby.only.usrReg)
+ 
   uptime = process.uptime()
   leo.sendMessage(from, `${infocreador}`, MessageType.text, {quoted: choute, contextInfo: { mentionedJid: [sender,Oowner]}})
 
@@ -1254,7 +1254,7 @@ if (choute.message.listResponseMessage){
   test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
   if (test.includes(`agradecimiento`)){
   leo.updatePresence(from, Presence.composing)
-  if (!isRegister) return reply(baby.only.usrReg)
+  
   uptime = process.uptime()
   txtt =
 `${agra}`
@@ -1275,7 +1275,7 @@ if (choute.message.listResponseMessage){
   test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
   if (test.includes(`linkgpw`)){
   leo.updatePresence(from, Presence.composing)
-  if (!isRegister) return reply(baby.only.usrReg)
+
   uptime = process.uptime()
   reply(`${linkgp}`)
 
@@ -1297,7 +1297,7 @@ if (choute.message.buttonsResponseMessage){
     test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
     if (test.includes(`soluboton`)){
     leo.updatePresence(from, Presence.composing)
-    if (!isRegister) return reply(baby.only.usrReg)
+  
     uptime = process.uptime()
 leo.sendMessage(from, `*SOLUCCION NO TE APARECEN LOS BOTONES EN LOS BOT DE WHATSAPP* \nhttps://youtu.be/s5c6FTjmdPA `, MessageType.text, {quoted: choute, caption: `El video sera subido pronto en el canal de `, contextInfo: {"forwardingScore": 508, "isForwarded": true, "externalAdReply": 
   {"title": `Hola ${pushname} 👋🏻`, 
@@ -1311,7 +1311,7 @@ if (choute.message.listResponseMessage){
   test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
   if (test.includes(`install`)){
   leo.updatePresence(from, Presence.composing)
-  if (!isRegister) return reply(baby.only.usrReg)
+ 
   uptime = process.uptime()
   leo.sendMessage(from, `${install}`, MessageType.text, {quoted: choute, contextInfo: { mentionedJid: [sender,Oowner]}})  
   addFilter(from)
@@ -1321,7 +1321,7 @@ if (choute.message.buttonsResponseMessage){
 test = choute.message.buttonsResponseMessage.selectedButtonId
 if (test.includes(`verdad`)){
   if (isBan) return reply (baby.only.benned)	
-  if (!isRegister) return reply(baby.only.usrReg)
+  
   respuesta = [`${A}`,`${B}`,`${C}`, `${D}`,`${E}`,`${F}`,`${G}`,`${H}`,`${I}`,`${J}`,`${K}`,`${L}`,`${M}`,`${N}`,`${Ñ}`,`${O}`,`${P}`,`${Q}`,`${R}`,`${S}`,`${T}`,`${U}`,`${V}`,`${W}`,`${X}`,`${Y}`,`${Z}`]
   answer = respuesta[Math.floor(Math.random() * respuesta.length)]
   reply(answer)  
@@ -1332,7 +1332,7 @@ if (choute.message.buttonsResponseMessage){
 test = choute.message.buttonsResponseMessage.selectedButtonId
 if (test.includes(`reto`)){
   if (isBan) return reply (baby.only.benned)	
-  if (!isRegister) return reply(baby.only.usrReg)
+
   respuesta = [ `${R1}`, `${R2}`, `${R3}`, `${R4}`, `${R5}`, `${R6}`, `${R7}`, `${R8}`, `${R9}`, `${R10}`, `${R11}`, `${R12}`, `${R13}`, `${R14}`, `${R15}`, `${R16}`, `${R17}`, `${R18}`, `${R19}`, `${R20}`, `${R21}`, `${R22}`, `${R23}`, `${R24}`, `${R25}`]
   answer = respuesta[Math.floor(Math.random() * respuesta.length)]
   reply(answer)
@@ -1350,7 +1350,7 @@ if (choute.message.buttonsResponseMessage){
   test = choute.message.buttonsResponseMessage.selectedButtonId
   if (test.includes(`listadmin`)){
     if (isBan) return reply (baby.only.benned)	
-    if (!isRegister) return reply(baby.only.usrReg)
+  
     if (!isGroup) return reply(baby.only.group)
     adm = `*Este grupo* *${groupMetadata.subject}*\nTiene ${groupAdmins.length} Administradores.\n\n`
     no = 0
@@ -1367,9 +1367,9 @@ if (choute.message.buttonsResponseMessage){
     test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
     if (test.includes(`Base`)){
     leo.updatePresence(from, Presence.composing)
-    if (!isRegister) return reply(baby.only.usrReg)
+   
     uptime = process.uptime()
-    leo.sendMessage(from, `🔥SIGUEME EN YOUTUBE🔥 \n${base}`, MessageType.text, {quoted: choute, caption: `${base}`, contextInfo: {"forwardingScore": 508, "isForwarded": true, "externalAdReply": 
+    leo.sendMessage(from, `⚜️SIGUEME EN YOUTUBE⚜️ \n${base}`, MessageType.text, {quoted: choute, caption: `${base}`, contextInfo: {"forwardingScore": 508, "isForwarded": true, "externalAdReply": 
     {"title": `Hola ${pushname} 👋🏻`, 
     "body": `BabyBechoso`, "mediaType": 2, 
     "thumbnail": fs.readFileSync(`media/imagen/fake.jpg`), 
@@ -1459,7 +1459,7 @@ case "serbot":
         reply(tekss);
         break;
 case 'reg':   
-            if (isRegister) return reply('*Ya te has registrado*')
+            if (isRegister) return reply('*Ahora puedes utilizar el bot sin necesidad de registros!!*')
             if (!q.includes('|')) return  reply(`${registro}`)
             const nombre = q.substring(0, q.indexOf('|') - 0)
             const edad = q.substring(q.lastIndexOf('|') + 1)
@@ -1481,11 +1481,11 @@ case 'reg':
                 capt = `
 
 ┌────「 *REGISTRADO* 」─
-[💈] 𝐔𝐒𝐄𝐑: _${pushname}_
-[💈] 𝐍𝐎𝐌𝐁𝐑𝐄: _${nombre}_
-[💈] 𝐄𝐃𝐀𝐃: _${edad}_
-[💈] 𝐇𝐎𝐑𝐀: _${time}_
-[💈] DNI: _${serialUser}_
+[⚜️] *USER*: _${pushname}_
+[⚜️] *NOMBRE*: _${nombre}_
+[⚜️] *EDAD*: _${edad}_
+[⚜️] *HORA*: _${time}_
+[⚜️] *DNI*: _${serialUser}_
 └────「 *_Neg Bot_* 」
 Verificación completa usa *${prefix}menu* para ver el Menu`
                 let tampa = await getBuffer(ppimg)
@@ -1493,7 +1493,7 @@ Verificación completa usa *${prefix}menu* para ver el Menu`
                 break 
 
 case 'menu':
-                if (!isRegister) return reply(baby.only.usrReg)
+                
                 if (isBan) return reply (baby.only.benned)	
                 reply('Cargando Menu, Por favor no hacer spam de mensaje')
                txtt =`${cmenu}`              
@@ -1524,7 +1524,7 @@ case 'welcome':
 case 'bv':
 case 'bienvenidas':
 case 'bienvenida':
-            if (!isRegister) return reply(baby.only.usrReg)
+           
             if (isBan) return reply (baby.only.benned)	
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)
@@ -1546,7 +1546,7 @@ case 'bienvenida':
 
 case 'admin':
 case 'promote':
-              if (!isRegister) return reply(baby.only.usrReg)
+           
               if (isBan) return reply (baby.only.benned)	
               if (!isGroup) return reply(baby.only.group)
               if (!isAdmin) return reply(baby.only.admin)
@@ -1564,7 +1564,7 @@ case 'promote':
               break
 
 case 'demote':
-              if (!isRegister) return reply(baby.only.usrReg)
+        
               if (isBan) return reply (baby.only.benned)	
               if (!isGroup) return reply(baby.only.group)
               if (!isAdmin) return reply(baby.only.admin)
@@ -1605,7 +1605,7 @@ case 'añadir':
 
 case 'kick':
 case 'eliminar':
-            if (!isRegister) return reply(baby.only.usrReg)
+        
             if (isBan) return reply (baby.only.benned)	
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)
@@ -1616,7 +1616,7 @@ case 'eliminar':
             break
 
 case 'antifake':        
-                if (!isRegister) return reply(baby.only.usrReg)
+            
                 if (isBan) return reply (baby.only.benned)	
                 if (!isWelkom) return reply('Activa la bienvenida antes para poder usar este comando')
                 if (!isGroup) return reply(baby.only.group)
@@ -1661,7 +1661,7 @@ case 'antilink':
                     break
  
 case 'grupo':
-            if (!isRegister) return reply(baby.only.usrReg)
+         
             if (isBan) return reply (baby.only.benned)	
             addFilter(from)
             if (!isGroup) return reply(baby.only.group)
@@ -1686,7 +1686,7 @@ case 'changename':
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)
             if (!botAdmin) return reply(baby.only.Badmin)
-            if (!isRegister) return reply(baby.only.usrReg)
+        
             if (isBan) return reply (baby.only.benned)	
                         var newName = args.join(" ")
             leo.groupUpdateSubject(from, newName).then(() => {
@@ -1696,7 +1696,7 @@ case 'changename':
 
 case 'descripcion':        
 case 'changedescripcion':
-  if (!isRegister) return reply(baby.only.usrReg)
+
   if (isBan) return reply (baby.only.benned)	
             addFilter(from)
             if (!isGroup) return reply(baby.only.group)
@@ -1710,7 +1710,7 @@ case 'changedescripcion':
 //MENCION
 case 'hidetag':
     
-            if (!isRegister) return reply(baby.only.usrReg)
+          
             if (isBan) return reply (baby.only.benned)	
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)
@@ -1723,7 +1723,7 @@ case 'tangall':
 case 'tagall':
 case 'alltang':
 case 'xd':
-            if (!isRegister) return reply(baby.only.usrReg)
+         
             if (isBan) return reply (baby.only.benned)	
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)    
@@ -1742,7 +1742,7 @@ case 'xd':
 
 case 'imagetang':
 case 'imagentang':
-            if (!isRegister) return reply(baby.only.usrReg)
+           
             if (isBan) return reply (baby.only.benned)	
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)
@@ -1753,7 +1753,7 @@ case 'imagentang':
 
 case 'stickertag':
 case 'stag':
-            if (!isRegister) return reply(baby.only.usrReg)
+           
             if (isBan) return reply (baby.only.benned)	
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)
@@ -1780,7 +1780,7 @@ case 'sticker':
 case 's':
 case 'stiker':
 case 'sticker':
-                  if (!isRegister) return reply(baby.only.usrReg)
+               
                   if (isBan) return reply (baby.only.benned)	
                   if (isMedia && !choute.message.videoMessage || isQuotedImage) {
                   const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(choute).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : choute
@@ -1872,7 +1872,7 @@ break
 
 case 'toimg':
 case 'aimg':
-                  if (!isRegister) return reply(baby.only.usrReg)
+                 
                   if (isBan) return reply (baby.only.benned)	
                           if (!isQuotedSticker) return reply(`Etiqueta un sticker que no sea de movimienyo`)
                           if (choute.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.isAnimated === true){
@@ -1910,7 +1910,7 @@ case 'agif':
 
 case 'play':
 case 'ytmp3':
-              if (!isRegister) return reply(baby.only.usrReg)
+            
               if (isBan) return reply (baby.only.benned)	
               teks = args.join(' ')
               if (!teks.endsWith("-doc")){
@@ -1937,7 +1937,7 @@ _No hagas spam del comando_`
               break	
 
 case 'ytmp4':
-                if (!isRegister) return reply(baby.only.usrReg)
+               
                 if (isBan) return reply (baby.only.benned)	
                 if (args.length < 1) return reply('Y el link?')
                 if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Debes de darme el link de *YOUTUBE*')
@@ -1976,7 +1976,7 @@ case 'listadmins':
 case 'listadmin':
 case 'adminlist':
 case 'adminslist': 
-            if (!isRegister) return reply(baby.only.usrReg)
+          
             if (isBan) return reply (baby.only.benned)	
             if (!isGroup) return reply(baby.only.group)
             adm = `*Este grupo* *${groupMetadata.subject}*\nTiene ${groupAdmins.length} Administradores.\n\n`
@@ -1990,7 +1990,7 @@ case 'adminslist':
 
 case 'soporte':
 case 'support':
-            if (!isRegister) return reply(baby.only.usrReg)
+         
             baby = `*Grupo de soporte:*\n\n${gpwha}`
             reply(baby) 
             break
@@ -1998,7 +1998,7 @@ case 'support':
 case 'link':
 case 'enlace':
             if (isBan) return reply (baby.only.benned)	
-            if (!isRegister) return reply(baby.only.usrReg)
+         
             if (!botAdmin) return reply(baby.only.Badmin)
             addFilter(from)
             var link = await wa.getGroupInvitationCode(from)
@@ -2007,7 +2007,7 @@ case 'enlace':
 
 case 'chiste':
             if (isBan) return reply (baby.only.benned)	
-            if (!isRegister) return reply(baby.only.usrReg)
+          
             respuesta = [`*Buenos días, me gustaría alquilar "Batman Forever".*\n No es posible, tiene que devolverla tomorrow.`, `*¿Qué le dijo un zapato a otro?* \n Qué vida más arrastrada llevas.`, `¿Qué le dice un techo a otro? \n Techo de menos.`, `*¿Qué le dijo batman al papel higiénico?* \n Tu eres el único que conoce mi baticueva.`, `— Buenos días, quería una camiseta de un personaje inspirador. \n — ¿Ghandi? \n — No, mediani.`, `*¿Qué le dice un árbol a otro?* \n ¡Qué pasa tronco!`, `*¿Qué hace un mudo bailando?* \n Una mudanza.`, `¿Qué le dice una iguana a su hermana gemela? \n Somos iguanitas`, `*Doctor, soy asmático, ¿es grave?* \n No amigo, es esdrújula.`, `*¿Qué le dice la foca a su madre?* \n I love you, mother foca.`, `*¿Sabes que le dice un .gif a un .jpg?* \n ¡Anímate hombre!`, `Ayer me caí y pensé que me había roto el peroné… \n ¡Peronó!` ]
             answer = respuesta[Math.floor(Math.random() * respuesta.length)]
             reply(answer)
@@ -2016,7 +2016,7 @@ case 'chiste':
 
 case 'doxxeo':
             if (isBan) return reply (baby.only.benned)	
-            if (!isRegister) return reply(baby.only.usrReg)
+         
             reply(`.play Oruga del Doxeo Plantilla meme| HD|`)
             respuesta = [`IP: 92.28.211.234 \nN: 43.7462 \nW:12.4893 \nSS Number: 6979191519182010 \nIPv6: fe80::5dcd::ef69::fb22::d9888 \nUPNP: Enabled \nDMZ: 10.112.42.15 \nMAC 5A:783E:7E:D0 \nISP: Ucom Unversal \nDNS: 8.8.8.8 \nALT DNS: 1.1.1.8.1 \nDNS SUFFIX: Dlink \nWAN TYPE: Private Nat \nGATEWAY: 192.168.0.1 \nSUBNET MASK: 225.225.0.251 \nUDP OPEN PORTS: 8080.80` ]
             answer = respuesta[Math.floor(Math.random() * respuesta.length)]
@@ -2051,7 +2051,7 @@ _A continuación te muestro, mi creador, en especial responderá mensajes *no sp
 
 
 case 'vor':
-            if (!isRegister) return reply(baby.only.usrReg)
+         
             if (isBan) return reply (baby.only.benned)	
               txtt =`*VERDAD O RETO*`
             buttons1 = [{buttonId:`verdad`,buttonText:{displayText: 'Verdad'},type:1},
@@ -2070,18 +2070,18 @@ case 'info':
 case 'estado':
 case 'ping':		 
 case 'infobot':		  
-            if (!isRegister) return reply(baby.only.usrReg)	
+          
             leo.sendMessage(from, fs.readFileSync('./media/imagen/infobot.jpg') , MessageType.image, {quoted: choute, caption: `${infobot}`},{contextInfo: {mentionedJid: [mentionUser]}})
             break
             
 case 'reglas':
-            if (!isRegister) return reply(baby.only.usrReg)	
+          
             leo.sendMessage(from, fs.readFileSync('./media/imagen/imgregla.jpg') , MessageType.image, {quoted: choute, caption: `${reglas}`})
             break
 
 case 'level':
 case 'nivel':
-            if (!isRegister) return reply(baby.only.usrReg)
+         
             if (isBan) return reply (baby.only.benned)	
             const lvup =  `${nivel}` 
             leo.sendMessage(from, lvup, MessageType.text, {quoted: choute} )
@@ -2116,7 +2116,7 @@ its = await getBuffer (ppimg)
     break
 case 'top5':
 
-              if (!isRegister) return reply(baby.only.usrReg)
+            
               if (isBan) return reply (baby.only.benned)	
   addFilter(from)
           if (!isGroup) return reply('Top5 en un chat? Te gusta la pija cierto. Este comando es solo para grupos.')
@@ -2143,7 +2143,7 @@ mentions(teks, member, true)
 break
 
 case 'pregunta':
-                  if (!isRegister) return reply(baby.only.usrReg)
+                
                   if (isBan) return reply (baby.only.benned)	
                   respuesta = ['Si', 'No', 'Tal vez', 'Puede ser', 'Hay una probabilidad de 99.999%', 'Puede que no', 'Yo que se', 'mmmm.... Deja lo pienso un poco']
                   answer = respuesta[Math.floor(Math.random() * respuesta.length)]
@@ -2158,7 +2158,7 @@ case 'letra':
 case 'letras':
   if (isBan) return reply (baby.only.benned)	
           if (args.length < 1) return reply('Escribe el nombre de la cancion')
-          if (!isRegister) return reply(baby.only.usrReg)
+         
           leo.updatePresence(from, Presence.composing)
           if (!q) return reply('*Cual es el nombre de la cancion?*')
           try {
@@ -2173,7 +2173,7 @@ case 'letras':
 
 case 'quecanciones':
 case 'quemusicaes':
-  if (!isRegister) return reply(baby.only.usrReg)
+ 
   if (isBan) return reply (baby.only.benned)	
                 if (!q) return reply(`${quecanciones}`)
               if (!isUrl) return reply('Por favor envia especificamente un link de la musica')
@@ -2183,7 +2183,7 @@ case 'quemusicaes':
               break       
 
 case 'google':
-  if (!isRegister) return reply(baby.only.usrReg)
+ 
   if (isBan) return reply (baby.only.benned)	
               let buscar = args.join(' ')
               if (!buscar) return reply('Que deseas buscar?')
@@ -2204,7 +2204,7 @@ case 'google':
 
 //𝙄𝙈𝘼𝙂𝙀𝙉
 case 'imagen':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
   if (isBan) return reply (baby.only.benned)	  
                 
               //if (args.length < 1) return reply('Que deseas buscar?')
@@ -2223,7 +2223,7 @@ case 'imagen':
               break
 
 case 'wp':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
   if (isBan) return reply (baby.only.benned)	
                 reply('*Deja busco un fondo de pantalla para ti*')
               res = LeoGgImg(`fondos de pantalla 4k ${q}`, google)
@@ -2315,7 +2315,7 @@ case 'idiomas':
 
 case 'meme':
                 leo.updatePresence(from, Presence.composing)
-                if (!isRegister) return reply(baby.only.usrReg)            
+                        
                 try {                
               leo.sendMessage(from, fs.readFileSync('./media/imagen/text.jpg'), image)
                 } catch {
@@ -2341,9 +2341,9 @@ case 'enlinea':
 
 //VIDEOS
 case 'reversa':
-if (!isRegister) return reply(baby.only.usrReg)
+
   if (isBan) return reply (baby.only.benned)	
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!isQuotedVideo) return reply('Por favor etiqueta un video con el comando!')
 reply('*Espera un momento por favor....*')
 encmediav = JSON.parse(JSON.stringify(choute).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
@@ -2360,7 +2360,7 @@ addFilter(from)
 break
 
 case 'vrapido':	    
-if (!isRegister) return reply(baby.only.usrReg)
+
 if (isBan) return reply (baby.only.benned)	
 if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO POR FAVOR!!*')
 reply(baby.wait)
@@ -2378,7 +2378,7 @@ addFilter(from)
 break
 
 case 'vlento':
-  if (!isRegister) return reply(baby.only.usrReg)
+
   if (isBan) return reply (baby.only.benned)	
 if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO POR FAVOR!!*')
 reply(baby.wait)
@@ -2396,7 +2396,7 @@ addFilter(from)
 break
 
 case 'mirror':
-  if (!isRegister) return reply(baby.only.usrReg)
+
   if (isBan) return reply (baby.only.benned)	
 if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO POR FAVOR!!*')
 reply(baby.wait)
@@ -2414,7 +2414,7 @@ addFilter(from)
 break
 
 case 'vefecto':
-  if (!isRegister) return reply(baby.only.usrReg)
+
   if (isBan) return reply (baby.only.benned)	
 if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO POR FAVOR!!*')
 reply(baby.wait)
@@ -2432,7 +2432,7 @@ addFilter(from)
 break
 
 case 'sinsonido':
-  if (!isRegister) return reply(baby.only.usrReg)
+
   if (isBan) return reply (baby.only.benned)	
 if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO POR FAVOR!!*')
 reply(baby.wait)
@@ -2607,7 +2607,7 @@ fs.unlinkSync(ran)
 break
 // -    -     -     - 𝐋𝐨𝐠𝐨𝐬 𝐁𝐲 𝕿𝖍ٌ𝖊𝕮𝖍𝖔𝖚𝖙𝖊 - - - -   
 case 'neon':
-  if (!isRegister) return reply(baby.only.usrReg)
+
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2616,7 +2616,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'matrix':
-  if (!isRegister) return reply(baby.only.usrReg)
+
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2625,7 +2625,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break		
   
 case 'break':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2634,7 +2634,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break		
   
 case 'dropwater':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2643,7 +2643,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break	
   
 case 'lobo':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
@@ -2653,7 +2653,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'flores':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2662,7 +2662,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break	
   
 case 'cross':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2671,7 +2671,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'seda':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2680,7 +2680,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'fire':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2689,7 +2689,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'glow':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2698,7 +2698,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'smoke':
-  if (!isRegister) return reply(baby.only.usrReg)
+ 
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2707,7 +2707,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break	
   
 case 'pubg':
-  if (!isRegister) return reply(baby.only.usrReg)
+ 
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
@@ -2717,7 +2717,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'cielo':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2726,7 +2726,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
 
 case 'cs':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2735,7 +2735,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break	
   
 case 'ligth':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2744,7 +2744,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break	
   
 case 'navidad':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/crismes?apikey=apivinz&text=${q}`
@@ -2752,7 +2752,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'nieve':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`
@@ -2760,7 +2760,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'tfire':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/tfire?apikey=apivinz&text=${q}`
@@ -2768,7 +2768,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break	
   
 case 'playa':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/sandw?apikey=apivinz&text=${q}`
@@ -2776,7 +2776,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'ff':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/epep?apikey=apivinz&text=${q}`
@@ -2784,7 +2784,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'goldbutton':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/gplaybutton?apikey=apivinz&text=${q}`
@@ -2792,7 +2792,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break		
 
 case 'silverbutton':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/splaybutton?apikey=apivinz&text=${q}`
@@ -2800,7 +2800,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break	
   
 case '3d':
-  if (!isRegister) return reply(baby.only.usrReg)
+ 
 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
@@ -2809,7 +2809,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break		
   
 case 'avengers':
-  if (!isRegister) return reply(baby.only.usrReg)
+ 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
 reply(`*Por favor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
@@ -2818,7 +2818,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break	
   
 case '3d2':
-  if (!isRegister) return reply(baby.only.usrReg)
+ 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/text3d?apikey=apivinz&text=${q}`
@@ -2826,7 +2826,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break	
   
 case 'ph':
-  if (!isRegister) return reply(baby.only.usrReg)
+ 
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
 reply(`*Por favor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
@@ -2835,7 +2835,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break		
   
 case 'blackpink':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/logobp?apikey=apivinz&text=${q}`
@@ -2843,7 +2843,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'marvel':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
 reply(`*Por favor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
@@ -2852,7 +2852,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break	
   
 case 'hojas':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/leavest?apikey=apivinz&text=${q}`
@@ -2860,7 +2860,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'tligth':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`Su logo de ${command} con el texto ${q}, sera creado a la brevedad`)		
 logo = `https://api.zeks.xyz/api/tlight?apikey=apivinz&text=${q}`
@@ -2868,7 +2868,7 @@ sendFileFromUrl(logo, image, {quoted: choute, caption: '*⚜️ Logos by Neg ⚜
 break
   
 case 'gtext':
-  if (!isRegister) return reply(baby.only.usrReg)
+  
 if (!q) return reply('*Y el texto para crear el logo donde esta?*')
 if (!q.includes('|')) return  reply(`*POR FAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
 reply(`*Por favor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
@@ -2879,7 +2879,7 @@ break
 
 //𝐋𝐢𝐬𝐭𝐚 𝐝𝐞 𝐌𝐞𝐧𝐮𝐬´
 case 'menuofc':
-              if (!isRegister) return reply(baby.only.usrReg)                
+                           
               reply('Cargando menu, por favor espera.\n\nNo hagas spam de comandos')
               leo.sendMessage(from, fs.readFileSync('./media/imagen/bot-baby.jpg'), image, {caption: `${allmenu}` , quoted: chr, contextInfo: { mentionedJid: [sender,Oowner]}})
               break
@@ -2928,7 +2928,7 @@ txtt = `${agra}`
 
 ///𝐂𝐨𝐦𝐚𝐧𝐝𝐨𝐬 𝐏𝐞𝐫𝐬𝐨𝐧𝐚𝐥𝐞𝐬
 case 'autoadmin':
-                if (!isRegister) return reply(baby.only.usrReg)
+                
                 if (isBan) return reply (baby.only.benned)	
                 if (!isGroup) return reply(baby.only.group)
                 if (!isAdmin) return reply(baby.only.admin)
@@ -2940,7 +2940,7 @@ leo.groupDemoteAdmin(from, [sender]) }, 2000)
 break
 
 case 'autokick':
-                if (!isRegister) return reply(baby.only.usrReg)
+                
                 if (isBan) return reply (baby.only.benned)	
                 if (!isGroup) return reply(baby.only.group)
                 if (!isAdmin) return reply(baby.only.admin)
@@ -2951,7 +2951,7 @@ case 'autokick':
                 break
 
 case 'autodemote':
-                if (!isRegister) return reply(baby.only.usrReg)
+                
                 if (isBan) return reply (baby.only.benned)	
                 if (!isGroup) return reply(baby.only.group)
                 if (!isAdmin) return reply(baby.only.admin)
